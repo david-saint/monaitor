@@ -1,0 +1,662 @@
+[
+  {
+    "id": "meta-sam-3-1",
+    "lab_id": "meta",
+    "model_name": "SAM 3.1",
+    "api_model_id": "sam-3-1",
+    "family": "Segment Anything",
+    "version": "3.1",
+    "tier": "specialized",
+    "tier_label": "SAM",
+    "modality_primary": "image",
+    "capabilities": [
+      "vision"
+    ],
+    "release_type": "point-update",
+    "availability": [
+      "api",
+      "open-weights"
+    ],
+    "open_weights": true,
+    "license": "SAM License",
+    "params_total_b": null,
+    "params_active_b": null,
+    "context_window_k": null,
+    "price_input_per_m": null,
+    "price_output_per_m": null,
+    "release_date": "2026-03-27",
+    "release_time_utc": "17:26",
+    "release_datetime_utc": "2026-03-27T17:26:00Z",
+    "time_confidence": "exact",
+    "day_of_week": "Friday",
+    "iso_week": 13,
+    "days_since_prev_lab_release": null,
+    "days_since_prev_same_tier": null,
+    "announcement_channel": "blog",
+    "event": null,
+    "pre_release_signals": [
+      "sam-3-nov-2025"
+    ],
+    "codename": null,
+    "predecessor_id": null,
+    "notable_benchmarks": {},
+    "summary": "SAM 3.1 was a drop-in update to SAM 3 adding object multiplexing, tracking up to 16 objects per pass and roughly doubling video throughput on an H100.",
+    "sources": [
+      "https://ai.meta.com/blog/segment-anything-model-3/",
+      "https://huggingface.co/facebook/sam3.1",
+      "https://x.com/AIatMeta/status/2037582117375553924"
+    ],
+    "confidence": "high"
+  },
+  {
+    "id": "meta-muse-spark",
+    "lab_id": "meta",
+    "model_name": "Muse Spark",
+    "api_model_id": null,
+    "family": "Muse",
+    "version": "1.0",
+    "tier": "flagship",
+    "tier_label": "Spark",
+    "modality_primary": "multimodal",
+    "capabilities": [
+      "reasoning",
+      "vision",
+      "tool-use",
+      "agentic",
+      "image-out"
+    ],
+    "release_type": "new-model",
+    "availability": [
+      "consumer-app",
+      "waitlist"
+    ],
+    "open_weights": false,
+    "license": null,
+    "params_total_b": null,
+    "params_active_b": null,
+    "context_window_k": null,
+    "price_input_per_m": null,
+    "price_output_per_m": null,
+    "release_date": "2026-04-08",
+    "release_time_utc": "16:05",
+    "release_datetime_utc": "2026-04-08T16:05:00Z",
+    "time_confidence": "exact",
+    "day_of_week": "Wednesday",
+    "iso_week": 15,
+    "days_since_prev_lab_release": 12,
+    "days_since_prev_same_tier": null,
+    "announcement_channel": "blog",
+    "event": null,
+    "pre_release_signals": [
+      "internal-codename:'avocado'",
+      "zuckerberg-jan-2026-earnings-tease"
+    ],
+    "codename": "Avocado",
+    "predecessor_id": null,
+    "notable_benchmarks": {
+      "Humanity's Last Exam": 58.0,
+      "FrontierScience Research": 38.0
+    },
+    "summary": "Muse Spark was Meta Superintelligence Labs' first model, a natively multimodal reasoning model with visual chain of thought and multi-agent orchestration, launched in Meta AI with a private API preview.",
+    "sources": [
+      "https://ai.meta.com/blog/introducing-muse-spark-msl/",
+      "https://techcrunch.com/2026/04/08/meta-debuts-the-muse-spark-model-in-a-ground-up-overhaul-of-its-ai",
+      "https://x.com/AIatMeta/status/2041910285653737975"
+    ],
+    "confidence": "high"
+  },
+  {
+    "id": "meta-muse-image",
+    "lab_id": "meta",
+    "model_name": "Muse Image",
+    "api_model_id": "muse-image",
+    "family": "Muse",
+    "version": "1.0",
+    "tier": "specialized",
+    "tier_label": "Image",
+    "modality_primary": "image",
+    "capabilities": [
+      "image-out",
+      "tool-use",
+      "reasoning"
+    ],
+    "release_type": "new-model",
+    "availability": [
+      "consumer-app"
+    ],
+    "open_weights": false,
+    "license": null,
+    "params_total_b": null,
+    "params_active_b": null,
+    "context_window_k": null,
+    "price_input_per_m": null,
+    "price_output_per_m": null,
+    "release_date": "2026-07-07",
+    "release_time_utc": "19:33",
+    "release_datetime_utc": "2026-07-07T19:33:00Z",
+    "time_confidence": "exact",
+    "day_of_week": "Tuesday",
+    "iso_week": 28,
+    "days_since_prev_lab_release": 90,
+    "days_since_prev_same_tier": 102,
+    "announcement_channel": "blog",
+    "event": null,
+    "pre_release_signals": [
+      "arena-sightings-july-2026"
+    ],
+    "codename": null,
+    "predecessor_id": null,
+    "notable_benchmarks": {},
+    "summary": "Muse Image was Meta Superintelligence Labs' first image-generation model, an agentic generator that calls search and coding tools and edits with multiple references.",
+    "sources": [
+      "https://ai.meta.com/blog/introducing-muse-image-muse-video-msl/",
+      "https://www.cnbc.com/2026/07/07/meta-ai-muse-image.html",
+      "https://x.com/AIatMeta/status/2074577662840832382"
+    ],
+    "confidence": "high"
+  },
+  {
+    "id": "meta-muse-video",
+    "lab_id": "meta",
+    "model_name": "Muse Video",
+    "api_model_id": "muse-video",
+    "family": "Muse",
+    "version": "1.0",
+    "tier": "specialized",
+    "tier_label": "Video",
+    "modality_primary": "video",
+    "capabilities": [
+      "video-out",
+      "audio-out"
+    ],
+    "release_type": "preview",
+    "availability": [
+      "waitlist"
+    ],
+    "open_weights": false,
+    "license": null,
+    "params_total_b": null,
+    "params_active_b": null,
+    "context_window_k": null,
+    "price_input_per_m": null,
+    "price_output_per_m": null,
+    "release_date": "2026-07-07",
+    "release_time_utc": "21:02",
+    "release_datetime_utc": "2026-07-07T21:02:00Z",
+    "time_confidence": "exact",
+    "day_of_week": "Tuesday",
+    "iso_week": 28,
+    "days_since_prev_lab_release": 0,
+    "days_since_prev_same_tier": 0,
+    "announcement_channel": "blog",
+    "event": null,
+    "pre_release_signals": [
+      "arena-text-to-video-sightings"
+    ],
+    "codename": null,
+    "predecessor_id": null,
+    "notable_benchmarks": {},
+    "summary": "Muse Video received an early preview alongside Muse Image, built on the same pretraining base with native audio and ranking third on Arena text-to-video at the time.",
+    "sources": [
+      "https://ai.meta.com/blog/introducing-muse-image-muse-video-msl/",
+      "https://x.com/AIatMeta/status/2074600027733860758"
+    ],
+    "confidence": "high"
+  },
+  {
+    "id": "meta-muse-spark-1-1",
+    "lab_id": "meta",
+    "model_name": "Muse Spark 1.1",
+    "api_model_id": "muse-spark-1.1",
+    "family": "Muse",
+    "version": "1.1",
+    "tier": "flagship",
+    "tier_label": "Spark",
+    "modality_primary": "multimodal",
+    "capabilities": [
+      "reasoning",
+      "vision",
+      "audio-in",
+      "tool-use",
+      "coding",
+      "agentic",
+      "computer-use",
+      "long-context"
+    ],
+    "release_type": "major-version",
+    "availability": [
+      "api",
+      "consumer-app"
+    ],
+    "open_weights": false,
+    "license": null,
+    "params_total_b": null,
+    "params_active_b": null,
+    "context_window_k": 1000,
+    "price_input_per_m": null,
+    "price_output_per_m": null,
+    "release_date": "2026-07-09",
+    "release_time_utc": "14:10",
+    "release_datetime_utc": "2026-07-09T14:10:00Z",
+    "time_confidence": "exact",
+    "day_of_week": "Thursday",
+    "iso_week": 28,
+    "days_since_prev_lab_release": 2,
+    "days_since_prev_same_tier": 92,
+    "announcement_channel": "blog",
+    "event": null,
+    "pre_release_signals": [
+      "meta-model-api-private-preview"
+    ],
+    "codename": null,
+    "predecessor_id": "meta-muse-spark",
+    "notable_benchmarks": {},
+    "summary": "Muse Spark 1.1 brought large gains in tool use, computer use, coding and multimodal understanding, and launched the public preview of the Meta Model API.",
+    "sources": [
+      "https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/",
+      "https://dev.meta.ai/docs/overview",
+      "https://x.com/AIatMeta/status/2075221088821518394"
+    ],
+    "confidence": "high"
+  },
+  {
+    "id": "meta-muse-spark-1-2",
+    "lab_id": "meta",
+    "model_name": "Muse Spark 1.2",
+    "api_model_id": "muse-spark-1.2",
+    "family": "Muse",
+    "version": "1.2",
+    "tier": "flagship",
+    "tier_label": "Spark",
+    "modality_primary": "multimodal",
+    "capabilities": [
+      "reasoning",
+      "vision",
+      "audio-in",
+      "tool-use",
+      "coding",
+      "agentic",
+      "computer-use",
+      "long-context"
+    ],
+    "release_type": "point-update",
+    "availability": [
+      "api",
+      "consumer-app"
+    ],
+    "open_weights": false,
+    "license": null,
+    "params_total_b": null,
+    "params_active_b": null,
+    "context_window_k": 1000,
+    "price_input_per_m": 1.25,
+    "price_output_per_m": 4.25,
+    "release_date": "2026-08-05",
+    "release_time_utc": "19:25",
+    "release_datetime_utc": "2026-08-05T19:25:00Z",
+    "time_confidence": "exact",
+    "day_of_week": "Wednesday",
+    "iso_week": 32,
+    "days_since_prev_lab_release": 27,
+    "days_since_prev_same_tier": 27,
+    "announcement_channel": "blog",
+    "event": null,
+    "pre_release_signals": [],
+    "codename": null,
+    "predecessor_id": "meta-muse-spark-1-1",
+    "notable_benchmarks": {
+      "DeepSWE": 59.3,
+      "MCP Atlas": 90.3
+    },
+    "summary": "Muse Spark 1.2 was a coding-focused update to 1.1 with better code generation, debugging and codebase understanding, launched alongside the Muse Code terminal agent.",
+    "sources": [
+      "https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2",
+      "https://developer.meta.com/ai/models/muse-spark",
+      "https://x.com/AIatMeta/status/2085084713203487041"
+    ],
+    "confidence": "high"
+  },
+  {
+    "id": "meta-muse-glimmer-30b",
+    "lab_id": "meta",
+    "model_name": "Muse Glimmer 30B",
+    "api_model_id": "muse-glimmer",
+    "family": "Muse Glimmer",
+    "version": "30B",
+    "tier": "open-weights-small",
+    "tier_label": "Glimmer",
+    "modality_primary": "multimodal",
+    "capabilities": [
+      "reasoning",
+      "vision",
+      "tool-use",
+      "coding",
+      "agentic"
+    ],
+    "release_type": "open-weights",
+    "availability": [
+      "open-weights"
+    ],
+    "open_weights": true,
+    "license": "Apache-2.0",
+    "params_total_b": 29.6,
+    "params_active_b": 29.6,
+    "context_window_k": 131,
+    "price_input_per_m": null,
+    "price_output_per_m": null,
+    "release_date": "2026-08-10",
+    "release_time_utc": "10:13",
+    "release_datetime_utc": "2026-08-10T10:13:00Z",
+    "time_confidence": "exact",
+    "day_of_week": "Monday",
+    "iso_week": 33,
+    "days_since_prev_lab_release": 5,
+    "days_since_prev_same_tier": null,
+    "announcement_channel": "blog",
+    "event": null,
+    "pre_release_signals": [
+      "zuckerberg-x-post-2026-08-10"
+    ],
+    "codename": null,
+    "predecessor_id": null,
+    "notable_benchmarks": {
+      "SWE-Bench Verified": 76.0,
+      "MCP Atlas": 75.5,
+      "DeepSearch QA": 74.6
+    },
+    "summary": "Muse Glimmer was a 29.6B dense open-weight model distilled from Muse Spark, built to run agent workflows locally on a single consumer GPU under Apache 2.0.",
+    "sources": [
+      "https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model",
+      "https://huggingface.co/meta-models/Muse-Glimmer-30B",
+      "https://x.com/AIatMeta/status/2086757844544811485"
+    ],
+    "confidence": "high"
+  },
+  {
+    "id": "meta-muse-voice-transcribe-1-0",
+    "lab_id": "meta",
+    "model_name": "Muse Voice Transcribe",
+    "api_model_id": "muse-voice-transcribe-1.0",
+    "family": "Muse",
+    "version": "1.0",
+    "tier": "specialized",
+    "tier_label": "Voice Transcribe",
+    "modality_primary": "speech",
+    "capabilities": [
+      "audio-in",
+      "audio-out"
+    ],
+    "release_type": "new-model",
+    "availability": [
+      "api"
+    ],
+    "open_weights": false,
+    "license": null,
+    "params_total_b": null,
+    "params_active_b": null,
+    "context_window_k": null,
+    "price_input_per_m": null,
+    "price_output_per_m": null,
+    "release_date": "2026-09-01",
+    "release_time_utc": "17:26",
+    "release_datetime_utc": "2026-09-01T17:26:00Z",
+    "time_confidence": "exact",
+    "day_of_week": "Tuesday",
+    "iso_week": 36,
+    "days_since_prev_lab_release": 22,
+    "days_since_prev_same_tier": 56,
+    "announcement_channel": "blog",
+    "event": null,
+    "pre_release_signals": [
+      "meta-ai-for-mac-dictation"
+    ],
+    "codename": null,
+    "predecessor_id": null,
+    "notable_benchmarks": {
+      "Artificial Analysis streaming WER": 3.1
+    },
+    "summary": "Muse Voice Transcribe was Meta's first real-time audio perception model, combining streaming ASR, speaker diarization for 20+ speakers and endpointing at $0.18 per audio hour.",
+    "sources": [
+      "https://research.meta.ai/blog/introducing-muse-voice-transcribe",
+      "https://9to5mac.com/2026/09/01/meta-launches-muse-voice-transcribe-for-real-time-voice-dictation-on-mac",
+      "https://x.com/AIatMeta/status/2094839236016976028"
+    ],
+    "confidence": "high"
+  },
+  {
+    "id": "meta-muse-spark-1-3",
+    "lab_id": "meta",
+    "model_name": "Muse Spark 1.3",
+    "api_model_id": "muse-spark-1.3",
+    "family": "Muse",
+    "version": "1.3",
+    "tier": "flagship",
+    "tier_label": "Spark",
+    "modality_primary": "multimodal",
+    "capabilities": [
+      "reasoning",
+      "vision",
+      "audio-in",
+      "tool-use",
+      "coding",
+      "agentic",
+      "computer-use",
+      "long-context"
+    ],
+    "release_type": "point-update",
+    "availability": [
+      "api",
+      "consumer-app"
+    ],
+    "open_weights": false,
+    "license": null,
+    "params_total_b": null,
+    "params_active_b": null,
+    "context_window_k": 1000,
+    "price_input_per_m": 1.25,
+    "price_output_per_m": 4.25,
+    "release_date": "2026-09-02",
+    "release_time_utc": "19:36",
+    "release_datetime_utc": "2026-09-02T19:36:00Z",
+    "time_confidence": "exact",
+    "day_of_week": "Wednesday",
+    "iso_week": 36,
+    "days_since_prev_lab_release": 1,
+    "days_since_prev_same_tier": 28,
+    "announcement_channel": "blog",
+    "event": null,
+    "pre_release_signals": [
+      "zuckerberg-x-post-2026-09-02"
+    ],
+    "codename": null,
+    "predecessor_id": "meta-muse-spark-1-2",
+    "notable_benchmarks": {
+      "Terminal-Bench": 82.9,
+      "DeepSWE": 55.0,
+      "GDPval-AA": 1615
+    },
+    "summary": "Muse Spark 1.3 improved long-horizon agentic and coding work, becoming the default model in Muse Code and the Meta Model API at $1.25/$4.25 per million tokens.",
+    "sources": [
+      "https://research.meta.ai/blog/introducing-muse-spark-1-3",
+      "https://dev.meta.ai/products/meta-model-api",
+      "https://x.com/AIatMeta/status/2095234385129963666"
+    ],
+    "confidence": "high"
+  },
+  {
+    "id": "meta-muse-wonder",
+    "lab_id": "meta",
+    "model_name": "Muse Wonder",
+    "api_model_id": "muse-wonder-1.0",
+    "family": "Muse Wonder",
+    "version": "1.0",
+    "tier": "flagship",
+    "tier_label": "Wonder",
+    "modality_primary": "multimodal",
+    "capabilities": [
+      "reasoning",
+      "vision",
+      "audio-in",
+      "tool-use",
+      "coding",
+      "agentic",
+      "computer-use",
+      "long-context"
+    ],
+    "release_type": "new-model",
+    "availability": [
+      "api",
+      "consumer-app"
+    ],
+    "open_weights": false,
+    "license": null,
+    "params_total_b": null,
+    "params_active_b": null,
+    "context_window_k": 1000,
+    "price_input_per_m": 4.0,
+    "price_output_per_m": 20.0,
+    "release_date": "2026-10-12",
+    "release_time_utc": "17:02",
+    "release_datetime_utc": "2026-10-12T17:02:00Z",
+    "time_confidence": "exact",
+    "day_of_week": "Monday",
+    "iso_week": 42,
+    "days_since_prev_lab_release": 40,
+    "days_since_prev_same_tier": 40,
+    "announcement_channel": "blog",
+    "event": null,
+    "pre_release_signals": [
+      "prometheus-training-run-reports",
+      "muse-agent-teasers"
+    ],
+    "codename": null,
+    "predecessor_id": "meta-muse-spark-1-3",
+    "notable_benchmarks": {
+      "MemoryBench": 85.6
+    },
+    "summary": "Muse Wonder was Meta's first frontier-class model, adding Active Memory and Active Focus for long-running personal and professional agents at $4/$20 per million tokens.",
+    "sources": [
+      "https://research.meta.ai/blog/muse-wonder",
+      "https://techcrunch.com/2026/10/12/meta-releases-its-first-frontier-model-muse-wonder/",
+      "https://dev.meta.ai/products/meta-model-api",
+      "https://x.com/AIatMeta/status/2109691148943999167"
+    ],
+    "confidence": "high"
+  },
+  {
+    "id": "meta-muse-wonder-full",
+    "lab_id": "meta",
+    "model_name": "Muse Wonder Full",
+    "api_model_id": "muse-wonder-full-1.0",
+    "family": "Muse Wonder",
+    "version": "1.0",
+    "tier": "flagship",
+    "tier_label": "Wonder Full",
+    "modality_primary": "multimodal",
+    "capabilities": [
+      "reasoning",
+      "vision",
+      "audio-in",
+      "tool-use",
+      "coding",
+      "agentic",
+      "computer-use",
+      "long-context"
+    ],
+    "release_type": "new-model",
+    "availability": [
+      "enterprise-only"
+    ],
+    "open_weights": false,
+    "license": null,
+    "params_total_b": null,
+    "params_active_b": null,
+    "context_window_k": 1000,
+    "price_input_per_m": null,
+    "price_output_per_m": null,
+    "release_date": "2026-10-12",
+    "release_time_utc": "17:02",
+    "release_datetime_utc": "2026-10-12T17:02:00Z",
+    "time_confidence": "exact",
+    "day_of_week": "Monday",
+    "iso_week": 42,
+    "days_since_prev_lab_release": 0,
+    "days_since_prev_same_tier": 0,
+    "announcement_channel": "blog",
+    "event": null,
+    "pre_release_signals": [
+      "prometheus-training-run-reports"
+    ],
+    "codename": null,
+    "predecessor_id": "meta-muse-wonder",
+    "notable_benchmarks": {
+      "DeepSWE 1.1": 79.0,
+      "MemoryBench": 85.5
+    },
+    "summary": "Muse Wonder Full was the stronger sibling in the Wonder series, restricted to Muse Code Power and Maximum subscription plans rather than the API.",
+    "sources": [
+      "https://research.meta.ai/blog/muse-wonder",
+      "https://www.technology.org/2026/10/13/meta-muse-wonder-frontier-model-pricing-muse-code",
+      "https://x.com/AIatMeta/status/2109691148943999167"
+    ],
+    "confidence": "high"
+  },
+  {
+    "id": "meta-muse-spark-open",
+    "lab_id": "meta",
+    "model_name": "Muse Spark Open",
+    "api_model_id": "muse-spark-open",
+    "family": "Muse",
+    "version": "1.0",
+    "tier": "flagship",
+    "tier_label": "Spark Open",
+    "modality_primary": "multimodal",
+    "capabilities": [
+      "reasoning",
+      "vision",
+      "audio-in",
+      "tool-use",
+      "coding",
+      "agentic",
+      "long-context"
+    ],
+    "release_type": "open-weights",
+    "availability": [
+      "open-weights",
+      "api"
+    ],
+    "open_weights": true,
+    "license": "Muse Model License",
+    "params_total_b": 816,
+    "params_active_b": 42,
+    "context_window_k": 1000,
+    "price_input_per_m": null,
+    "price_output_per_m": null,
+    "release_date": "2026-10-15",
+    "release_time_utc": "17:08",
+    "release_datetime_utc": "2026-10-15T17:08:00Z",
+    "time_confidence": "exact",
+    "day_of_week": "Thursday",
+    "iso_week": 42,
+    "days_since_prev_lab_release": 3,
+    "days_since_prev_same_tier": 3,
+    "announcement_channel": "blog",
+    "event": null,
+    "pre_release_signals": [
+      "zuckerberg-x-post-2026-09-02-open-weights-soon"
+    ],
+    "codename": null,
+    "predecessor_id": null,
+    "notable_benchmarks": {
+      "AA Intelligence Index": 39.0
+    },
+    "summary": "Muse Spark Open released the 816B-parameter (42B active) Muse Spark weights under the Muse Model License, tuned to run on paired M5 Ultra Mac Studios.",
+    "sources": [
+      "https://research.meta.ai/blog/muse-spark-open",
+      "https://venturebeat.com/technology/meta-unveils-muse-spark-open-the-new-top-u-s-open-weights-model-and-it-runs-on-two-paired-mac-desktops",
+      "https://huggingface.co/meta-models/Muse-Spark-Open-816B-A42B",
+      "https://x.com/AIatMeta/status/2110779754274292212"
+    ],
+    "confidence": "high"
+  }
+]

@@ -1,0 +1,1455 @@
+[
+  {
+    "id": "sample-mistral-large-3",
+    "lab_id": "mistral",
+    "model_name": "Mistral Large 3",
+    "api_model_id": "mistral-large-3-20260121",
+    "family": "Mistral",
+    "version": "3",
+    "tier": "flagship",
+    "tier_label": "Large",
+    "modality_primary": "text",
+    "capabilities": [
+      "reasoning",
+      "tool-use",
+      "coding",
+      "long-context"
+    ],
+    "release_type": "new-model",
+    "availability": [
+      "api",
+      "enterprise-only"
+    ],
+    "open_weights": false,
+    "license": null,
+    "params_total_b": null,
+    "params_active_b": null,
+    "context_window_k": 256,
+    "price_input_per_m": 2,
+    "price_output_per_m": 6,
+    "release_date": "2026-01-21",
+    "release_time_utc": "14:00",
+    "time_confidence": "exact",
+    "announcement_channel": "blog",
+    "event": null,
+    "pre_release_signals": [
+      "mistral-status-page-banner"
+    ],
+    "codename": "mistral-large-3",
+    "predecessor_id": null,
+    "notable_benchmarks": {
+      "MMLU-Pro": 78.2
+    },
+    "summary": "Mistral's flagship general-purpose model, with EU-hosted enterprise deployment options.",
+    "sources": [
+      "https://example.com/mistral/large-3"
+    ],
+    "confidence": "high",
+    "day_of_week": "Wednesday",
+    "iso_week": 4,
+    "release_datetime_utc": "2026-01-21T14:00:00Z",
+    "days_since_prev_lab_release": null,
+    "days_since_prev_same_tier": null
+  },
+  {
+    "id": "sample-google-gemini-3-5-pro",
+    "lab_id": "google",
+    "model_name": "Gemini 3.5 Pro",
+    "api_model_id": "gemini-3.5-pro-20260128",
+    "family": "Gemini",
+    "version": "3.5",
+    "tier": "flagship",
+    "tier_label": "Pro",
+    "modality_primary": "multimodal",
+    "capabilities": [
+      "reasoning",
+      "vision",
+      "tool-use",
+      "coding",
+      "agentic",
+      "long-context",
+      "audio-in",
+      "video-out"
+    ],
+    "release_type": "major-version",
+    "availability": [
+      "api",
+      "consumer-app"
+    ],
+    "open_weights": false,
+    "license": null,
+    "params_total_b": null,
+    "params_active_b": null,
+    "context_window_k": 2000,
+    "price_input_per_m": 1.25,
+    "price_output_per_m": 10,
+    "release_date": "2026-01-28",
+    "release_time_utc": "17:00",
+    "time_confidence": "exact",
+    "announcement_channel": "livestream",
+    "event": "Gemini 3.5 launch",
+    "pre_release_signals": [
+      "deepmind-preprint:'unified-attention'",
+      "lmarena-codename:'vega'"
+    ],
+    "codename": "vega",
+    "predecessor_id": null,
+    "notable_benchmarks": {
+      "GPQA Diamond": 91.7,
+      "SWE-bench Verified": 80.2,
+      "MMMU": 82.9
+    },
+    "summary": "Google's flagship multimodal model with native audio input and a 2M-token context window.",
+    "sources": [
+      "https://example.com/google/gemini-3-5-pro",
+      "https://example.com/google/gemini-3-5-model-card"
+    ],
+    "confidence": "high",
+    "day_of_week": "Wednesday",
+    "iso_week": 5,
+    "release_datetime_utc": "2026-01-28T17:00:00Z",
+    "days_since_prev_lab_release": null,
+    "days_since_prev_same_tier": null
+  },
+  {
+    "id": "sample-google-gemini-3-5-flash",
+    "lab_id": "google",
+    "model_name": "Gemini 3.5 Flash",
+    "api_model_id": "gemini-3.5-flash-20260128",
+    "family": "Gemini",
+    "version": "3.5",
+    "tier": "fast",
+    "tier_label": "Flash",
+    "modality_primary": "multimodal",
+    "capabilities": [
+      "reasoning",
+      "vision",
+      "tool-use",
+      "coding",
+      "audio-in",
+      "long-context"
+    ],
+    "release_type": "new-model",
+    "availability": [
+      "api",
+      "consumer-app"
+    ],
+    "open_weights": false,
+    "license": null,
+    "params_total_b": null,
+    "params_active_b": null,
+    "context_window_k": 1000,
+    "price_input_per_m": 0.3,
+    "price_output_per_m": 2.5,
+    "release_date": "2026-01-28",
+    "release_time_utc": "17:00",
+    "time_confidence": "exact",
+    "announcement_channel": "livestream",
+    "event": "Gemini 3.5 launch",
+    "pre_release_signals": [
+      "play-console-listing"
+    ],
+    "codename": null,
+    "predecessor_id": null,
+    "notable_benchmarks": {
+      "GPQA Diamond": 86.4
+    },
+    "summary": "The low-cost Flash tier of the Gemini 3.5 family, launched alongside Pro.",
+    "sources": [
+      "https://example.com/google/gemini-3-5-flash"
+    ],
+    "confidence": "high",
+    "day_of_week": "Wednesday",
+    "iso_week": 5,
+    "release_datetime_utc": "2026-01-28T17:00:00Z",
+    "days_since_prev_lab_release": 0,
+    "days_since_prev_same_tier": null
+  },
+  {
+    "id": "sample-openai-gpt-5-5",
+    "lab_id": "openai",
+    "model_name": "GPT-5.5",
+    "api_model_id": "gpt-5.5-2026-02-05",
+    "family": "GPT",
+    "version": "5.5",
+    "tier": "flagship",
+    "tier_label": "GPT",
+    "modality_primary": "text",
+    "capabilities": [
+      "reasoning",
+      "tool-use",
+      "coding",
+      "agentic",
+      "long-context",
+      "vision"
+    ],
+    "release_type": "major-version",
+    "availability": [
+      "api",
+      "consumer-app"
+    ],
+    "open_weights": false,
+    "license": null,
+    "params_total_b": null,
+    "params_active_b": null,
+    "context_window_k": 400,
+    "price_input_per_m": 2.5,
+    "price_output_per_m": 15,
+    "release_date": "2026-02-05",
+    "release_time_utc": "18:00",
+    "time_confidence": "exact",
+    "announcement_channel": "livestream",
+    "event": "GPT-5.5 launch stream",
+    "pre_release_signals": [
+      "lmarena-codename:'orion-2'",
+      "app-string:'gpt-5.5-thinking'"
+    ],
+    "codename": "orion-2",
+    "predecessor_id": null,
+    "notable_benchmarks": {
+      "SWE-bench Verified": 78.4,
+      "GPQA Diamond": 89.1,
+      "AIME 2026": 96.2
+    },
+    "summary": "OpenAI's flagship reasoning model, with a 400k context window and a rebuilt agentic tool loop.",
+    "sources": [
+      "https://example.com/openai/gpt-5-5-announcement",
+      "https://example.com/openai/gpt-5-5-system-card"
+    ],
+    "confidence": "high",
+    "day_of_week": "Thursday",
+    "iso_week": 6,
+    "release_datetime_utc": "2026-02-05T18:00:00Z",
+    "days_since_prev_lab_release": null,
+    "days_since_prev_same_tier": null
+  },
+  {
+    "id": "sample-xai-grok-5",
+    "lab_id": "xai",
+    "model_name": "Grok 5",
+    "api_model_id": "grok-5-20260217",
+    "family": "Grok",
+    "version": "5",
+    "tier": "flagship",
+    "tier_label": "Grok",
+    "modality_primary": "multimodal",
+    "capabilities": [
+      "reasoning",
+      "vision",
+      "tool-use",
+      "coding",
+      "agentic",
+      "long-context"
+    ],
+    "release_type": "new-model",
+    "availability": [
+      "api",
+      "consumer-app"
+    ],
+    "open_weights": false,
+    "license": null,
+    "params_total_b": null,
+    "params_active_b": null,
+    "context_window_k": 256,
+    "price_input_per_m": 3,
+    "price_output_per_m": 15,
+    "release_date": "2026-02-17",
+    "release_time_utc": "20:00",
+    "time_confidence": "exact",
+    "announcement_channel": "livestream",
+    "event": null,
+    "pre_release_signals": [
+      "x-post-teaser:'grok-5'",
+      "colossus-job-listing"
+    ],
+    "codename": "grok-5",
+    "predecessor_id": null,
+    "notable_benchmarks": {
+      "GPQA Diamond": 87.2,
+      "AIME 2026": 94
+    },
+    "summary": "xAI's flagship model, trained on the expanded Colossus cluster with real-time search grounding.",
+    "sources": [
+      "https://example.com/xai/grok-5"
+    ],
+    "confidence": "high",
+    "day_of_week": "Tuesday",
+    "iso_week": 8,
+    "release_datetime_utc": "2026-02-17T20:00:00Z",
+    "days_since_prev_lab_release": null,
+    "days_since_prev_same_tier": null
+  },
+  {
+    "id": "sample-alibaba-qwen-3-5-max",
+    "lab_id": "alibaba",
+    "model_name": "Qwen 3.5 Max",
+    "api_model_id": "qwen3.5-max-20260225",
+    "family": "Qwen",
+    "version": "3.5",
+    "tier": "flagship",
+    "tier_label": "Max",
+    "modality_primary": "multimodal",
+    "capabilities": [
+      "reasoning",
+      "vision",
+      "tool-use",
+      "coding",
+      "agentic",
+      "long-context"
+    ],
+    "release_type": "new-model",
+    "availability": [
+      "api",
+      "consumer-app"
+    ],
+    "open_weights": false,
+    "license": null,
+    "params_total_b": null,
+    "params_active_b": null,
+    "context_window_k": 1000,
+    "price_input_per_m": 1.2,
+    "price_output_per_m": 6,
+    "release_date": "2026-02-25",
+    "release_time_utc": "09:00",
+    "time_confidence": "exact",
+    "announcement_channel": "blog",
+    "event": null,
+    "pre_release_signals": [
+      "modelscope-staging-page"
+    ],
+    "codename": "qwen-max-3.5",
+    "predecessor_id": null,
+    "notable_benchmarks": {
+      "MMLU-Pro": 84.1,
+      "SWE-bench Verified": 73
+    },
+    "summary": "Alibaba's hosted flagship, with strong multilingual and document-understanding benchmarks.",
+    "sources": [
+      "https://example.com/alibaba/qwen-3-5-max"
+    ],
+    "confidence": "high",
+    "day_of_week": "Wednesday",
+    "iso_week": 9,
+    "release_datetime_utc": "2026-02-25T09:00:00Z",
+    "days_since_prev_lab_release": null,
+    "days_since_prev_same_tier": null
+  },
+  {
+    "id": "sample-deepseek-v4",
+    "lab_id": "deepseek",
+    "model_name": "DeepSeek V4",
+    "api_model_id": "deepseek-v4-20260303",
+    "family": "DeepSeek",
+    "version": "4",
+    "tier": "mid",
+    "tier_label": "V",
+    "modality_primary": "text",
+    "capabilities": [
+      "reasoning",
+      "coding",
+      "long-context"
+    ],
+    "release_type": "major-version",
+    "availability": [
+      "api",
+      "open-weights"
+    ],
+    "open_weights": true,
+    "license": "MIT",
+    "params_total_b": 685,
+    "params_active_b": 37,
+    "context_window_k": 256,
+    "price_input_per_m": 0.28,
+    "price_output_per_m": 1.1,
+    "release_date": "2026-03-03",
+    "release_time_utc": "13:00",
+    "time_confidence": "exact",
+    "announcement_channel": "github",
+    "event": null,
+    "pre_release_signals": [
+      "github-branch:'v4'"
+    ],
+    "codename": null,
+    "predecessor_id": null,
+    "notable_benchmarks": {
+      "SWE-bench Verified": 74.5,
+      "AIME 2026": 91.8
+    },
+    "summary": "A 685B MoE model with MIT-licensed weights and aggressive API pricing.",
+    "sources": [
+      "https://example.com/deepseek/v4"
+    ],
+    "confidence": "high",
+    "day_of_week": "Tuesday",
+    "iso_week": 10,
+    "release_datetime_utc": "2026-03-03T13:00:00Z",
+    "days_since_prev_lab_release": null,
+    "days_since_prev_same_tier": null
+  },
+  {
+    "id": "sample-google-gemini-3-5-flash-ga",
+    "lab_id": "google",
+    "model_name": "Gemini 3.5 Flash GA",
+    "api_model_id": "gemini-3.5-flash-ga-20260310",
+    "family": "Gemini",
+    "version": "3.5",
+    "tier": "fast",
+    "tier_label": "Flash",
+    "modality_primary": "multimodal",
+    "capabilities": [
+      "reasoning",
+      "vision",
+      "tool-use",
+      "coding",
+      "audio-in",
+      "long-context"
+    ],
+    "release_type": "ga",
+    "availability": [
+      "api",
+      "consumer-app",
+      "enterprise-only"
+    ],
+    "open_weights": false,
+    "license": null,
+    "params_total_b": null,
+    "params_active_b": null,
+    "context_window_k": 1000,
+    "price_input_per_m": 0.3,
+    "price_output_per_m": 2.5,
+    "release_date": "2026-03-10",
+    "release_time_utc": "16:00",
+    "time_confidence": "exact",
+    "announcement_channel": "docs-changelog",
+    "event": null,
+    "pre_release_signals": [],
+    "codename": null,
+    "predecessor_id": "sample-google-gemini-3-5-flash",
+    "notable_benchmarks": {},
+    "summary": "General-availability promotion for Gemini 3.5 Flash, with SLA-backed enterprise access.",
+    "sources": [
+      "https://example.com/google/gemini-3-5-flash-ga"
+    ],
+    "confidence": "high",
+    "day_of_week": "Tuesday",
+    "iso_week": 11,
+    "release_datetime_utc": "2026-03-10T16:00:00Z",
+    "days_since_prev_lab_release": 41,
+    "days_since_prev_same_tier": 41
+  },
+  {
+    "id": "sample-anthropic-claude-opus-4-6",
+    "lab_id": "anthropic",
+    "model_name": "Claude Opus 4.6",
+    "api_model_id": "claude-opus-4-6-20260312",
+    "family": "Claude",
+    "version": "4.6",
+    "tier": "flagship",
+    "tier_label": "Opus",
+    "modality_primary": "text",
+    "capabilities": [
+      "reasoning",
+      "vision",
+      "tool-use",
+      "coding",
+      "agentic",
+      "long-context",
+      "computer-use"
+    ],
+    "release_type": "major-version",
+    "availability": [
+      "api",
+      "consumer-app",
+      "enterprise-only"
+    ],
+    "open_weights": false,
+    "license": null,
+    "params_total_b": null,
+    "params_active_b": null,
+    "context_window_k": 200,
+    "price_input_per_m": 5,
+    "price_output_per_m": 25,
+    "release_date": "2026-03-12",
+    "release_time_utc": "17:00",
+    "time_confidence": "exact",
+    "announcement_channel": "blog",
+    "event": null,
+    "pre_release_signals": [
+      "lmarena-codename:'clio'",
+      "aws-bedrock-listing"
+    ],
+    "codename": "clio",
+    "predecessor_id": null,
+    "notable_benchmarks": {
+      "SWE-bench Verified": 82,
+      "GPQA Diamond": 90.3,
+      "OSWorld": 61.4
+    },
+    "summary": "An Opus refresh focused on long-horizon agentic coding and computer use.",
+    "sources": [
+      "https://example.com/anthropic/claude-opus-4-6"
+    ],
+    "confidence": "high",
+    "day_of_week": "Thursday",
+    "iso_week": 11,
+    "release_datetime_utc": "2026-03-12T17:00:00Z",
+    "days_since_prev_lab_release": null,
+    "days_since_prev_same_tier": null
+  },
+  {
+    "id": "sample-zhipu-glm-6",
+    "lab_id": "zhipu",
+    "model_name": "GLM-6",
+    "api_model_id": "glm-6-20260402",
+    "family": "GLM",
+    "version": "6",
+    "tier": "mid",
+    "tier_label": "GLM",
+    "modality_primary": "text",
+    "capabilities": [
+      "reasoning",
+      "coding",
+      "tool-use",
+      "long-context"
+    ],
+    "release_type": "new-model",
+    "availability": [
+      "api",
+      "open-weights"
+    ],
+    "open_weights": true,
+    "license": "MIT",
+    "params_total_b": 355,
+    "params_active_b": 32,
+    "context_window_k": 200,
+    "price_input_per_m": 0.15,
+    "price_output_per_m": 0.6,
+    "release_date": "2026-04-02",
+    "release_time_utc": "06:00",
+    "time_confidence": "exact",
+    "announcement_channel": "github",
+    "event": null,
+    "pre_release_signals": [
+      "github-commit:'glm-6'"
+    ],
+    "codename": null,
+    "predecessor_id": null,
+    "notable_benchmarks": {
+      "SWE-bench Verified": 71.2,
+      "MMLU-Pro": 79
+    },
+    "summary": "A 355B open-weights MoE model with MIT licensing and a low-cost hosted endpoint.",
+    "sources": [
+      "https://example.com/zhipu/glm-6"
+    ],
+    "confidence": "high",
+    "day_of_week": "Thursday",
+    "iso_week": 14,
+    "release_datetime_utc": "2026-04-02T06:00:00Z",
+    "days_since_prev_lab_release": null,
+    "days_since_prev_same_tier": null
+  },
+  {
+    "id": "sample-meta-llama-5-70b",
+    "lab_id": "meta",
+    "model_name": "Llama 5 70B",
+    "api_model_id": null,
+    "family": "Llama",
+    "version": "5",
+    "tier": "open-weights-small",
+    "tier_label": "70B",
+    "modality_primary": "text",
+    "capabilities": [
+      "reasoning",
+      "coding",
+      "long-context"
+    ],
+    "release_type": "open-weights",
+    "availability": [
+      "open-weights"
+    ],
+    "open_weights": true,
+    "license": "Llama Community License",
+    "params_total_b": 70,
+    "params_active_b": 70,
+    "context_window_k": 128,
+    "price_input_per_m": null,
+    "price_output_per_m": null,
+    "release_date": "2026-04-08",
+    "release_time_utc": "16:00",
+    "time_confidence": "exact",
+    "announcement_channel": "huggingface",
+    "event": null,
+    "pre_release_signals": [
+      "github-config-leak:'llama5'"
+    ],
+    "codename": "llama5",
+    "predecessor_id": null,
+    "notable_benchmarks": {
+      "MMLU-Pro": 76.8
+    },
+    "summary": "Meta's 70B open-weights release, positioned against mid-tier hosted models.",
+    "sources": [
+      "https://example.com/meta/llama-5-70b"
+    ],
+    "confidence": "high",
+    "day_of_week": "Wednesday",
+    "iso_week": 15,
+    "release_datetime_utc": "2026-04-08T16:00:00Z",
+    "days_since_prev_lab_release": null,
+    "days_since_prev_same_tier": null
+  },
+  {
+    "id": "sample-alibaba-qwen-3-5-32b",
+    "lab_id": "alibaba",
+    "model_name": "Qwen 3.5 32B",
+    "api_model_id": null,
+    "family": "Qwen",
+    "version": "3.5",
+    "tier": "open-weights-small",
+    "tier_label": "32B",
+    "modality_primary": "text",
+    "capabilities": [
+      "reasoning",
+      "coding",
+      "long-context"
+    ],
+    "release_type": "open-weights",
+    "availability": [
+      "open-weights"
+    ],
+    "open_weights": true,
+    "license": "Apache-2.0",
+    "params_total_b": 32,
+    "params_active_b": 32,
+    "context_window_k": 256,
+    "price_input_per_m": null,
+    "price_output_per_m": null,
+    "release_date": "2026-04-15",
+    "release_time_utc": "10:00",
+    "time_confidence": "exact",
+    "announcement_channel": "huggingface",
+    "event": null,
+    "pre_release_signals": [
+      "huggingface-draft-repo:'qwen3.5-32b'"
+    ],
+    "codename": null,
+    "predecessor_id": null,
+    "notable_benchmarks": {
+      "MMLU-Pro": 73.6
+    },
+    "summary": "An Apache-2.0 dense 32B model released with quantized and long-context variants.",
+    "sources": [
+      "https://example.com/alibaba/qwen-3-5-32b"
+    ],
+    "confidence": "high",
+    "day_of_week": "Wednesday",
+    "iso_week": 16,
+    "release_datetime_utc": "2026-04-15T10:00:00Z",
+    "days_since_prev_lab_release": 49,
+    "days_since_prev_same_tier": null
+  },
+  {
+    "id": "sample-openai-gpt-oss-120b-v2",
+    "lab_id": "openai",
+    "model_name": "gpt-oss-120b v2",
+    "api_model_id": null,
+    "family": "gpt-oss",
+    "version": "2",
+    "tier": "open-weights-small",
+    "tier_label": "oss",
+    "modality_primary": "text",
+    "capabilities": [
+      "reasoning",
+      "coding",
+      "long-context"
+    ],
+    "release_type": "open-weights",
+    "availability": [
+      "open-weights",
+      "api"
+    ],
+    "open_weights": true,
+    "license": "Apache-2.0",
+    "params_total_b": 120,
+    "params_active_b": 5.1,
+    "context_window_k": 131,
+    "price_input_per_m": null,
+    "price_output_per_m": null,
+    "release_date": "2026-04-22",
+    "release_time_utc": "15:00",
+    "time_confidence": "exact",
+    "announcement_channel": "huggingface",
+    "event": null,
+    "pre_release_signals": [
+      "huggingface-draft-repo:'openai/gpt-oss-120b-v2'"
+    ],
+    "codename": null,
+    "predecessor_id": null,
+    "notable_benchmarks": {
+      "MMLU-Pro": 81,
+      "HumanEval": 92.4
+    },
+    "summary": "A refreshed open-weights MoE model with a smaller active parameter count and a permissive license.",
+    "sources": [
+      "https://example.com/openai/gpt-oss-120b-v2"
+    ],
+    "confidence": "high",
+    "day_of_week": "Wednesday",
+    "iso_week": 17,
+    "release_datetime_utc": "2026-04-22T15:00:00Z",
+    "days_since_prev_lab_release": 76,
+    "days_since_prev_same_tier": null
+  },
+  {
+    "id": "sample-google-gemma-4-27b",
+    "lab_id": "google",
+    "model_name": "Gemma 4 27B",
+    "api_model_id": null,
+    "family": "Gemma",
+    "version": "4",
+    "tier": "open-weights-small",
+    "tier_label": "27B",
+    "modality_primary": "text",
+    "capabilities": [
+      "reasoning",
+      "coding",
+      "long-context"
+    ],
+    "release_type": "open-weights",
+    "availability": [
+      "open-weights"
+    ],
+    "open_weights": true,
+    "license": "Gemma Terms of Use",
+    "params_total_b": 27,
+    "params_active_b": 27,
+    "context_window_k": 128,
+    "price_input_per_m": null,
+    "price_output_per_m": null,
+    "release_date": "2026-05-12",
+    "release_time_utc": "14:00",
+    "time_confidence": "exact",
+    "announcement_channel": "huggingface",
+    "event": null,
+    "pre_release_signals": [
+      "huggingface-draft-repo:'google/gemma-4-27b'"
+    ],
+    "codename": null,
+    "predecessor_id": null,
+    "notable_benchmarks": {
+      "MMLU-Pro": 74.3,
+      "HumanEval": 85.1
+    },
+    "summary": "A dense 27B open-weights model tuned for single-GPU deployment.",
+    "sources": [
+      "https://example.com/google/gemma-4-27b"
+    ],
+    "confidence": "high",
+    "day_of_week": "Tuesday",
+    "iso_week": 20,
+    "release_datetime_utc": "2026-05-12T14:00:00Z",
+    "days_since_prev_lab_release": 63,
+    "days_since_prev_same_tier": null
+  },
+  {
+    "id": "sample-anthropic-claude-sonnet-4-6",
+    "lab_id": "anthropic",
+    "model_name": "Claude Sonnet 4.6",
+    "api_model_id": "claude-sonnet-4-6-20260528",
+    "family": "Claude",
+    "version": "4.6",
+    "tier": "mid",
+    "tier_label": "Sonnet",
+    "modality_primary": "multimodal",
+    "capabilities": [
+      "reasoning",
+      "vision",
+      "tool-use",
+      "coding",
+      "agentic",
+      "long-context"
+    ],
+    "release_type": "point-update",
+    "availability": [
+      "api",
+      "consumer-app"
+    ],
+    "open_weights": false,
+    "license": null,
+    "params_total_b": null,
+    "params_active_b": null,
+    "context_window_k": 1000,
+    "price_input_per_m": 3,
+    "price_output_per_m": 15,
+    "release_date": "2026-05-28",
+    "release_time_utc": "16:00",
+    "time_confidence": "exact",
+    "announcement_channel": "docs-changelog",
+    "event": null,
+    "pre_release_signals": [
+      "api-changelog-diff"
+    ],
+    "codename": null,
+    "predecessor_id": null,
+    "notable_benchmarks": {
+      "SWE-bench Verified": 79.1,
+      "MMMU": 78.6
+    },
+    "summary": "A Sonnet update with a 1M-token context option and improved vision resolution.",
+    "sources": [
+      "https://example.com/anthropic/changelog"
+    ],
+    "confidence": "high",
+    "day_of_week": "Thursday",
+    "iso_week": 22,
+    "release_datetime_utc": "2026-05-28T16:00:00Z",
+    "days_since_prev_lab_release": 77,
+    "days_since_prev_same_tier": null
+  },
+  {
+    "id": "sample-mistral-magistral-2",
+    "lab_id": "mistral",
+    "model_name": "Magistral 2",
+    "api_model_id": "magistral-2-20260602",
+    "family": "Magistral",
+    "version": "2",
+    "tier": "mid",
+    "tier_label": "Magistral",
+    "modality_primary": "text",
+    "capabilities": [
+      "reasoning",
+      "coding"
+    ],
+    "release_type": "new-model",
+    "availability": [
+      "api",
+      "open-weights"
+    ],
+    "open_weights": true,
+    "license": "Apache-2.0",
+    "params_total_b": 24,
+    "params_active_b": 24,
+    "context_window_k": 128,
+    "price_input_per_m": 1.5,
+    "price_output_per_m": 5,
+    "release_date": "2026-06-02",
+    "release_time_utc": "15:00",
+    "time_confidence": "exact",
+    "announcement_channel": "blog",
+    "event": null,
+    "pre_release_signals": [
+      "lmarena-codename:'magistral-2'"
+    ],
+    "codename": "magistral-2",
+    "predecessor_id": null,
+    "notable_benchmarks": {
+      "AIME 2026": 88.7
+    },
+    "summary": "An Apache-2.0 reasoning model with transparent chain-of-thought traces.",
+    "sources": [
+      "https://example.com/mistral/magistral-2"
+    ],
+    "confidence": "high",
+    "day_of_week": "Tuesday",
+    "iso_week": 23,
+    "release_datetime_utc": "2026-06-02T15:00:00Z",
+    "days_since_prev_lab_release": 132,
+    "days_since_prev_same_tier": null
+  },
+  {
+    "id": "sample-openai-gpt-5-5-mini",
+    "lab_id": "openai",
+    "model_name": "GPT-5.5 mini",
+    "api_model_id": "gpt-5.5-mini-2026-06-18",
+    "family": "GPT",
+    "version": "5.5",
+    "tier": "fast",
+    "tier_label": "mini",
+    "modality_primary": "multimodal",
+    "capabilities": [
+      "reasoning",
+      "vision",
+      "tool-use",
+      "coding"
+    ],
+    "release_type": "point-update",
+    "availability": [
+      "api",
+      "consumer-app"
+    ],
+    "open_weights": false,
+    "license": null,
+    "params_total_b": null,
+    "params_active_b": null,
+    "context_window_k": 400,
+    "price_input_per_m": 0.25,
+    "price_output_per_m": 2,
+    "release_date": "2026-06-18",
+    "release_time_utc": "16:12",
+    "time_confidence": "approximate",
+    "announcement_channel": "docs-changelog",
+    "event": null,
+    "pre_release_signals": [],
+    "codename": null,
+    "predecessor_id": null,
+    "notable_benchmarks": {
+      "SWE-bench Verified": 66.8
+    },
+    "summary": "A cheaper, lower-latency sibling of GPT-5.5 aimed at high-volume multimodal workloads.",
+    "sources": [
+      "https://example.com/openai/changelog"
+    ],
+    "confidence": "high",
+    "day_of_week": "Thursday",
+    "iso_week": 25,
+    "release_datetime_utc": "2026-06-18T16:12:00Z",
+    "days_since_prev_lab_release": 57,
+    "days_since_prev_same_tier": null
+  },
+  {
+    "id": "sample-deepseek-r2",
+    "lab_id": "deepseek",
+    "model_name": "DeepSeek R2",
+    "api_model_id": "deepseek-r2-20260625",
+    "family": "DeepSeek",
+    "version": "2",
+    "tier": "flagship",
+    "tier_label": "R",
+    "modality_primary": "text",
+    "capabilities": [
+      "reasoning",
+      "coding",
+      "agentic",
+      "long-context"
+    ],
+    "release_type": "experimental",
+    "availability": [
+      "api",
+      "open-weights"
+    ],
+    "open_weights": true,
+    "license": "MIT",
+    "params_total_b": null,
+    "params_active_b": null,
+    "context_window_k": 128,
+    "price_input_per_m": 1.2,
+    "price_output_per_m": 4,
+    "release_date": "2026-06-25",
+    "release_time_utc": "12:00",
+    "time_confidence": "exact",
+    "announcement_channel": "github",
+    "event": null,
+    "pre_release_signals": [
+      "github-commit:'r2-router'",
+      "lmarena-codename:'r2'"
+    ],
+    "codename": "r2-router",
+    "predecessor_id": null,
+    "notable_benchmarks": {
+      "GPQA Diamond": 85.9,
+      "AIME 2026": 95.1
+    },
+    "summary": "An experimental reasoning model with a learned router and open MIT-licensed weights.",
+    "sources": [
+      "https://example.com/deepseek/r2"
+    ],
+    "confidence": "high",
+    "day_of_week": "Thursday",
+    "iso_week": 26,
+    "release_datetime_utc": "2026-06-25T12:00:00Z",
+    "days_since_prev_lab_release": 114,
+    "days_since_prev_same_tier": null
+  },
+  {
+    "id": "sample-xai-grok-5-fast",
+    "lab_id": "xai",
+    "model_name": "Grok 5 Fast",
+    "api_model_id": "grok-5-fast-20260709",
+    "family": "Grok",
+    "version": "5",
+    "tier": "fast",
+    "tier_label": "Fast",
+    "modality_primary": "text",
+    "capabilities": [
+      "reasoning",
+      "tool-use"
+    ],
+    "release_type": "preview",
+    "availability": [
+      "api",
+      "waitlist"
+    ],
+    "open_weights": false,
+    "license": null,
+    "params_total_b": null,
+    "params_active_b": null,
+    "context_window_k": 128,
+    "price_input_per_m": 0.5,
+    "price_output_per_m": 2,
+    "release_date": "2026-07-09",
+    "release_time_utc": "21:00",
+    "time_confidence": "exact",
+    "announcement_channel": "x-twitter",
+    "event": null,
+    "pre_release_signals": [
+      "x-post:'fast-mode'"
+    ],
+    "codename": "cheetah",
+    "predecessor_id": null,
+    "notable_benchmarks": {},
+    "summary": "A preview of Grok's low-latency inference tier, limited to API waitlist users.",
+    "sources": [
+      "https://example.com/xai/grok-5-fast-preview"
+    ],
+    "confidence": "medium",
+    "day_of_week": "Thursday",
+    "iso_week": 28,
+    "release_datetime_utc": "2026-07-09T21:00:00Z",
+    "days_since_prev_lab_release": 142,
+    "days_since_prev_same_tier": null
+  },
+  {
+    "id": "sample-moonshot-kimi-k3",
+    "lab_id": "moonshot",
+    "model_name": "Kimi K3",
+    "api_model_id": "kimi-k3-20260716",
+    "family": "Kimi",
+    "version": "3",
+    "tier": "flagship",
+    "tier_label": "K",
+    "modality_primary": "text",
+    "capabilities": [
+      "reasoning",
+      "coding",
+      "agentic",
+      "long-context"
+    ],
+    "release_type": "major-version",
+    "availability": [
+      "api",
+      "open-weights"
+    ],
+    "open_weights": true,
+    "license": "Modified MIT",
+    "params_total_b": 1000,
+    "params_active_b": 32,
+    "context_window_k": 512,
+    "price_input_per_m": 0.6,
+    "price_output_per_m": 2.5,
+    "release_date": "2026-07-16",
+    "release_time_utc": "08:00",
+    "time_confidence": "exact",
+    "announcement_channel": "blog",
+    "event": null,
+    "pre_release_signals": [
+      "moonshot-recruiting-page:'k3'",
+      "github-config"
+    ],
+    "codename": "k3",
+    "predecessor_id": null,
+    "notable_benchmarks": {
+      "SWE-bench Verified": 77.8,
+      "AIME 2026": 93.4
+    },
+    "summary": "A 1T-parameter open-weights MoE model with a 512k context window and agentic tool use.",
+    "sources": [
+      "https://example.com/moonshot/kimi-k3"
+    ],
+    "confidence": "high",
+    "day_of_week": "Thursday",
+    "iso_week": 29,
+    "release_datetime_utc": "2026-07-16T08:00:00Z",
+    "days_since_prev_lab_release": null,
+    "days_since_prev_same_tier": null
+  },
+  {
+    "id": "sample-anthropic-claude-haiku-4-5",
+    "lab_id": "anthropic",
+    "model_name": "Claude Haiku 4.5",
+    "api_model_id": "claude-haiku-4-5-20260804",
+    "family": "Claude",
+    "version": "4.5",
+    "tier": "fast",
+    "tier_label": "Haiku",
+    "modality_primary": "multimodal",
+    "capabilities": [
+      "vision",
+      "tool-use",
+      "coding"
+    ],
+    "release_type": "new-model",
+    "availability": [
+      "api",
+      "consumer-app"
+    ],
+    "open_weights": false,
+    "license": null,
+    "params_total_b": null,
+    "params_active_b": null,
+    "context_window_k": 200,
+    "price_input_per_m": 0.8,
+    "price_output_per_m": 4,
+    "release_date": "2026-08-04",
+    "release_time_utc": null,
+    "time_confidence": "unknown",
+    "announcement_channel": "blog",
+    "event": null,
+    "pre_release_signals": [],
+    "codename": null,
+    "predecessor_id": null,
+    "notable_benchmarks": {
+      "SWE-bench Verified": 68.2
+    },
+    "summary": "A fast-tier model positioned for sub-second classification and lightweight coding agents.",
+    "sources": [
+      "https://example.com/anthropic/claude-haiku-4-5"
+    ],
+    "confidence": "high",
+    "day_of_week": "Tuesday",
+    "iso_week": 32,
+    "release_datetime_utc": "2026-08-04T00:00:00Z",
+    "days_since_prev_lab_release": 67,
+    "days_since_prev_same_tier": null
+  },
+  {
+    "id": "sample-google-veo-4",
+    "lab_id": "google",
+    "model_name": "Veo 4",
+    "api_model_id": "veo-4-20260819",
+    "family": "Veo",
+    "version": "4",
+    "tier": "specialized",
+    "tier_label": "Veo",
+    "modality_primary": "video",
+    "capabilities": [
+      "video-out",
+      "audio-out",
+      "image-out"
+    ],
+    "release_type": "new-model",
+    "availability": [
+      "api",
+      "consumer-app"
+    ],
+    "open_weights": false,
+    "license": null,
+    "params_total_b": null,
+    "params_active_b": null,
+    "context_window_k": null,
+    "price_input_per_m": null,
+    "price_output_per_m": null,
+    "release_date": "2026-08-19",
+    "release_time_utc": "18:00",
+    "time_confidence": "approximate",
+    "announcement_channel": "blog",
+    "event": null,
+    "pre_release_signals": [
+      "vertex-model-garden-listing"
+    ],
+    "codename": "aurora",
+    "predecessor_id": null,
+    "notable_benchmarks": {},
+    "summary": "A video generation model with 4K output and shot-level camera control.",
+    "sources": [
+      "https://example.com/google/veo-4"
+    ],
+    "confidence": "medium",
+    "day_of_week": "Wednesday",
+    "iso_week": 34,
+    "release_datetime_utc": "2026-08-19T18:00:00Z",
+    "days_since_prev_lab_release": 99,
+    "days_since_prev_same_tier": null
+  },
+  {
+    "id": "sample-alibaba-wan-3-0",
+    "lab_id": "alibaba",
+    "model_name": "Wan 3.0",
+    "api_model_id": "wan-3.0-20260827",
+    "family": "Wan",
+    "version": "3.0",
+    "tier": "specialized",
+    "tier_label": "Wan",
+    "modality_primary": "video",
+    "capabilities": [
+      "video-out",
+      "image-out"
+    ],
+    "release_type": "new-model",
+    "availability": [
+      "api",
+      "consumer-app"
+    ],
+    "open_weights": false,
+    "license": null,
+    "params_total_b": null,
+    "params_active_b": null,
+    "context_window_k": null,
+    "price_input_per_m": null,
+    "price_output_per_m": null,
+    "release_date": "2026-08-27",
+    "release_time_utc": "11:00",
+    "time_confidence": "approximate",
+    "announcement_channel": "blog",
+    "event": null,
+    "pre_release_signals": [],
+    "codename": null,
+    "predecessor_id": null,
+    "notable_benchmarks": {},
+    "summary": "A video generation model with improved motion coherence and image-to-video control.",
+    "sources": [
+      "https://example.com/alibaba/wan-3-0"
+    ],
+    "confidence": "medium",
+    "day_of_week": "Thursday",
+    "iso_week": 35,
+    "release_datetime_utc": "2026-08-27T11:00:00Z",
+    "days_since_prev_lab_release": 134,
+    "days_since_prev_same_tier": null
+  },
+  {
+    "id": "sample-zhipu-glm-6-air",
+    "lab_id": "zhipu",
+    "model_name": "GLM-6 Air",
+    "api_model_id": "glm-6-air-20260909",
+    "family": "GLM",
+    "version": "6",
+    "tier": "fast",
+    "tier_label": "Air",
+    "modality_primary": "text",
+    "capabilities": [
+      "reasoning",
+      "coding"
+    ],
+    "release_type": "point-update",
+    "availability": [
+      "api",
+      "open-weights"
+    ],
+    "open_weights": true,
+    "license": "MIT",
+    "params_total_b": 106,
+    "params_active_b": 12,
+    "context_window_k": 128,
+    "price_input_per_m": 0.08,
+    "price_output_per_m": 0.3,
+    "release_date": "2026-09-09",
+    "release_time_utc": "07:00",
+    "time_confidence": "exact",
+    "announcement_channel": "huggingface",
+    "event": null,
+    "pre_release_signals": [],
+    "codename": "air",
+    "predecessor_id": null,
+    "notable_benchmarks": {
+      "MMLU-Pro": 68.9
+    },
+    "summary": "A lighter GLM-6 variant tuned for throughput, released with MIT-licensed weights.",
+    "sources": [
+      "https://example.com/zhipu/glm-6-air"
+    ],
+    "confidence": "high",
+    "day_of_week": "Wednesday",
+    "iso_week": 37,
+    "release_datetime_utc": "2026-09-09T07:00:00Z",
+    "days_since_prev_lab_release": 160,
+    "days_since_prev_same_tier": null
+  },
+  {
+    "id": "sample-meta-llama-5-behemoth",
+    "lab_id": "meta",
+    "model_name": "Llama 5 Behemoth",
+    "api_model_id": null,
+    "family": "Llama",
+    "version": "5",
+    "tier": "flagship",
+    "tier_label": "Behemoth",
+    "modality_primary": "multimodal",
+    "capabilities": [
+      "reasoning",
+      "vision",
+      "coding",
+      "agentic",
+      "long-context"
+    ],
+    "release_type": "experimental",
+    "availability": [
+      "waitlist"
+    ],
+    "open_weights": false,
+    "license": null,
+    "params_total_b": 2000,
+    "params_active_b": 288,
+    "context_window_k": 1000,
+    "price_input_per_m": null,
+    "price_output_per_m": null,
+    "release_date": "2026-09-15",
+    "release_time_utc": null,
+    "time_confidence": "unknown",
+    "announcement_channel": "event-keynote",
+    "event": "Meta Connect 2026",
+    "pre_release_signals": [
+      "zuckerberg-interview-tease",
+      "datacenter-filing"
+    ],
+    "codename": "behemoth",
+    "predecessor_id": null,
+    "notable_benchmarks": {},
+    "summary": "A 2T-parameter experimental MoE model released to a small waitlist for evaluation.",
+    "sources": [
+      "https://example.com/meta/llama-5-behemoth"
+    ],
+    "confidence": "low",
+    "day_of_week": "Tuesday",
+    "iso_week": 38,
+    "release_datetime_utc": "2026-09-15T00:00:00Z",
+    "days_since_prev_lab_release": 159,
+    "days_since_prev_same_tier": null
+  },
+  {
+    "id": "sample-mistral-codestral-2",
+    "lab_id": "mistral",
+    "model_name": "Codestral 2",
+    "api_model_id": "codestral-2-20260924",
+    "family": "Codestral",
+    "version": "2",
+    "tier": "mid",
+    "tier_label": "Codestral",
+    "modality_primary": "code",
+    "capabilities": [
+      "coding",
+      "tool-use",
+      "long-context"
+    ],
+    "release_type": "deprecation-replacement",
+    "availability": [
+      "api",
+      "enterprise-only"
+    ],
+    "open_weights": false,
+    "license": null,
+    "params_total_b": null,
+    "params_active_b": null,
+    "context_window_k": 256,
+    "price_input_per_m": 0.3,
+    "price_output_per_m": 1.2,
+    "release_date": "2026-09-24",
+    "release_time_utc": "14:00",
+    "time_confidence": "exact",
+    "announcement_channel": "docs-changelog",
+    "event": null,
+    "pre_release_signals": [],
+    "codename": null,
+    "predecessor_id": null,
+    "notable_benchmarks": {
+      "HumanEval": 94.2
+    },
+    "summary": "Codestral 2 replaces Codestral 1 across API and IDE integrations, with fill-in-the-middle improvements.",
+    "sources": [
+      "https://example.com/mistral/codestral-2"
+    ],
+    "confidence": "high",
+    "day_of_week": "Thursday",
+    "iso_week": 39,
+    "release_datetime_utc": "2026-09-24T14:00:00Z",
+    "days_since_prev_lab_release": 114,
+    "days_since_prev_same_tier": 114
+  },
+  {
+    "id": "sample-openai-sora-3",
+    "lab_id": "openai",
+    "model_name": "Sora 3",
+    "api_model_id": null,
+    "family": "Sora",
+    "version": "3",
+    "tier": "specialized",
+    "tier_label": "Sora",
+    "modality_primary": "video",
+    "capabilities": [
+      "video-out",
+      "audio-out"
+    ],
+    "release_type": "new-model",
+    "availability": [
+      "consumer-app",
+      "waitlist"
+    ],
+    "open_weights": false,
+    "license": null,
+    "params_total_b": null,
+    "params_active_b": null,
+    "context_window_k": null,
+    "price_input_per_m": null,
+    "price_output_per_m": null,
+    "release_date": "2026-09-30",
+    "release_time_utc": null,
+    "time_confidence": "unknown",
+    "announcement_channel": "blog",
+    "event": null,
+    "pre_release_signals": [
+      "sora-watermark-spotted",
+      "app-asset:'sora-3-turbo'"
+    ],
+    "codename": "ember",
+    "predecessor_id": null,
+    "notable_benchmarks": {},
+    "summary": "A text-to-video model with native synchronized audio and longer shot continuity.",
+    "sources": [
+      "https://example.com/openai/sora-3"
+    ],
+    "confidence": "medium",
+    "day_of_week": "Wednesday",
+    "iso_week": 40,
+    "release_datetime_utc": "2026-09-30T00:00:00Z",
+    "days_since_prev_lab_release": 103,
+    "days_since_prev_same_tier": null
+  },
+  {
+    "id": "sample-google-nano-banana-2",
+    "lab_id": "google",
+    "model_name": "Nano Banana 2",
+    "api_model_id": "gemini-2.5-flash-image-20261006",
+    "family": "Gemini Image",
+    "version": "2",
+    "tier": "specialized",
+    "tier_label": "Nano Banana",
+    "modality_primary": "image",
+    "capabilities": [
+      "image-out",
+      "vision"
+    ],
+    "release_type": "point-update",
+    "availability": [
+      "api",
+      "consumer-app"
+    ],
+    "open_weights": false,
+    "license": null,
+    "params_total_b": null,
+    "params_active_b": null,
+    "context_window_k": null,
+    "price_input_per_m": null,
+    "price_output_per_m": null,
+    "release_date": "2026-10-06",
+    "release_time_utc": "15:00",
+    "time_confidence": "exact",
+    "announcement_channel": "x-twitter",
+    "event": null,
+    "pre_release_signals": [
+      "gemini-app-asset-leak"
+    ],
+    "codename": "citrus-2",
+    "predecessor_id": null,
+    "notable_benchmarks": {},
+    "summary": "An image editing update with stronger text rendering and multi-reference consistency.",
+    "sources": [
+      "https://example.com/google/nano-banana-2"
+    ],
+    "confidence": "high",
+    "day_of_week": "Tuesday",
+    "iso_week": 41,
+    "release_datetime_utc": "2026-10-06T15:00:00Z",
+    "days_since_prev_lab_release": 48,
+    "days_since_prev_same_tier": 48
+  }
+]
