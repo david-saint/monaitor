@@ -140,7 +140,10 @@ h1:focus { outline: none; }
 }
 .side-top { display: flex; align-items: center; justify-content: space-between; padding-left: 10px; }
 .brand { display: inline-flex; align-items: center; gap: 11px; text-decoration: none; }
-.brand-word { font: 500 17px/1 var(--sans); letter-spacing: -0.02em; }
+.brand-word { font: 500 17px/1 var(--sans); letter-spacing: -0.02em; transition: color 0.3s var(--ease); }
+.brand-ai { color: var(--accent); transition: color 0.3s var(--ease); }
+.brand:hover .brand-word { color: var(--accent); }
+.brand:hover .brand-ai { color: var(--ink); }
 .brand-mark { position: relative; width: 26px; height: 12px; display: inline-block; }
 .brand-mark i { position: absolute; left: 0; right: 4px; top: 50%; height: 1.5px; background: var(--ink); transform: translateY(-50%); }
 .brand-mark b { position: absolute; right: 0; top: 50%; width: 9px; height: 9px; border-radius: 50%; background: var(--accent); transform: translateY(-50%); transition: transform 0.5s var(--ease); }
