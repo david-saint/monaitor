@@ -5,7 +5,7 @@
 import {
   CHANNEL_LABELS, CONFIDENCE_ORDER, TIERS, clear, confidenceDots, csvCell, domainOf, fmtClock, fmtContext, fmtInt, fmtParams, fmtPrice, fmtReleaseDate, fmtReleaseShortDate, fmtReleaseWeekdayLong, fmtTime, h, flattenSignals, modalityLabel, plural, safeUrl, tierOf, typeOf, tzAbbr,
 } from "./util.mjs?v=4";
-import { reducedMotion } from "./motion.mjs?v=4";
+import { reducedMotion } from "./motion.mjs?v=5";
 
 const PAGE = 30;
 const CONF_TEXT = { high: "High · primary source", medium: "Medium · reputable press", low: "Low · single or unclear source" };

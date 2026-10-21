@@ -9,7 +9,7 @@ import { loadDataset } from "./data.mjs?v=4";
 import { buildForecasts, forecastLede, renderForecast } from "./forecast.mjs?v=4";
 import { buildCadence, buildKpis, buildRhythm, buildTimeline, buildWeekdayMatrix, createBucketTip, createTooltip, tierKey } from "./charts.mjs?v=4";
 import { buildLedger, buildSheet } from "./ledger.mjs?v=4";
-import { reducedMotion } from "./motion.mjs?v=4";
+import { reducedMotion, spring } from "./motion.mjs?v=5";
 
 /* ── theme ────────────────────────────────────────────────────────────────── */
 
@@ -75,6 +75,16 @@ function initTimeZone(onChange) {
   const buttons = $$("#tz-control [data-tz]");
   const lede = $("#tz-lede");
   const methodTz = $("#method-hour-tz");
+  const control = $("#tz-control");
+  const thumb = $("#tz-control .tz-thumb");
+  const pill = spring({ x: 0, w: 0 }, ({ x, w }) => {
+    thumb.style.width = `${w}px`;
+    thumb.style.transform = `translateX(${x}px)`;
+  });
+  const place = (snap) => {
+    const active = buttons.find((b) => b.getAttribute("aria-pressed") === "true");
+    if (active && active.offsetWidth) pill.to({ x: active.offsetLeft, w: active.offsetWidth }, { snap });
+  };
 
   const sync = () => {
     const mode = timeZoneMode();
@@ -90,6 +100,7 @@ function initTimeZone(onChange) {
         : "Times are in UTC.";
     }
     if (methodTz) methodTz.textContent = mode === "local" ? "local time" : "UTC";
+    place(false);
   };
 
   for (const b of buttons) {
@@ -102,6 +113,8 @@ function initTimeZone(onChange) {
     });
   }
   sync();
+  place(true);
+  new ResizeObserver(() => place(true)).observe(control);
 }
 
 /* ── filters ──────────────────────────────────────────────────────────────── */

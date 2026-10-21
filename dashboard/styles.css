@@ -146,17 +146,19 @@ h1:focus { outline: none; }
 .brand-mark b { position: absolute; right: 0; top: 50%; width: 9px; height: 9px; border-radius: 50%; background: var(--accent); transform: translateY(-50%); transition: transform 0.5s var(--ease); }
 .brand:hover .brand-mark b { transform: translate(-6px, -50%); }
 
-.side-settings { display: grid; gap: 8px; padding: 0 10px; margin-block: -12px -6px; }
-.side-settings-label { padding-left: 2px; }
-.tz-control { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; padding: 2px; border: 1px solid var(--line-2); border-radius: 999px; }
+.side-settings { display: block; margin-block: -12px -6px; }
+.tz-control { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 2px; padding: 2px; border: 1px solid var(--line-2); border-radius: 999px; }
+.tz-thumb {
+  position: absolute; left: 0; top: 2px; bottom: 2px; width: 0; border-radius: 999px;
+  background: var(--neutral-soft); pointer-events: none; will-change: transform;
+}
 .tz-control button {
-  border-radius: 999px; padding: 4px 6px;
+  position: relative; border-radius: 999px; padding: 5px 6px;
   font: 500 11px/1.45 var(--sans); letter-spacing: 0.02em; color: var(--ink-3);
-  transition: background-color 0.2s, color 0.2s;
+  transition: color 0.2s;
 }
 .tz-control button:hover { color: var(--ink); }
-:root[data-tz="utc"] .tz-control button[data-tz="utc"],
-:root[data-tz="local"] .tz-control button[data-tz="local"] { background: var(--neutral-soft); color: var(--ink); }
+.tz-control button[aria-pressed="true"] { color: var(--ink); }
 
 .nav { display: grid; gap: 2px; }
 .nav a {
@@ -651,7 +653,6 @@ h1:focus { outline: none; }
   }
   .side-top { padding-left: 0; }
   .side-settings { position: absolute; top: 8px; right: calc(var(--gutter) + 44px); display: block; margin: 0; padding: 0; }
-  .side-settings-label { display: none; }
   .tz-control button { padding: 3px 7px; font-size: 10.5px; }
   .side-foot, .side-toggle { display: none; }
   .nav { display: flex; gap: 2px; overflow-x: auto; margin: 0 calc(-1 * var(--gutter)); padding: 4px var(--gutter) 8px; scrollbar-width: none; }

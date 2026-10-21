@@ -8,7 +8,7 @@
 import {
   DAY_MS, DOW_LONG, DOW_SHORT, LAB_BY_ID, MONTHS, TIERS, clear, countBy, fmtDays, fmtInt, fmtReleaseShortDate, fmtWhen, h, hourOf, isLocalTime, launchDayGapDetails, median, pad2, plural, quantile, releaseDayIndex, tierOf, typeOf, groupBy, fmtShortDate,
 } from "./util.mjs?v=4";
-import { countUp } from "./motion.mjs?v=4";
+import { countUp } from "./motion.mjs?v=5";
 
 /* ── tooltip ──────────────────────────────────────────────────────────────── */
 
