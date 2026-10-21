@@ -7,7 +7,7 @@ import {
 } from "./util.mjs?v=4";
 import { loadDataset } from "./data.mjs?v=4";
 import { buildForecasts, forecastLede, renderForecast } from "./forecast.mjs?v=4";
-import { buildCadence, buildKpis, buildRhythm, buildTimeline, buildWeekdayMatrix, createBucketTip, createTooltip, tierKey } from "./charts.mjs?v=4";
+import { buildCadence, buildKpis, buildRhythm, buildTimeline, buildWeekdayMatrix, createBucketTip, createTooltip, tierKey } from "./charts.mjs?v=5";
 import { buildLedger, buildSheet } from "./ledger.mjs?v=4";
 import { reducedMotion, spring } from "./motion.mjs?v=5";
 

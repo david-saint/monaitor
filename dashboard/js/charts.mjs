@@ -397,7 +397,7 @@ export function buildWeekdayMatrix(container, { tip, onOpen }) {
       armBucket(totalEl, total, `${name}, all days`);
       wireBucket(totalEl, () => ({ title: `${name} · all days`, rows: list }), panel, tip);
       return h("div", { class: `mx-row ${cls}`, role: "row" },
-        h("span", { class: "mx-lab", role: "rowheader" }, color ? h("i", { class: "lab-dot", style: { background: color } }) : null, name),
+        h("span", { class: "mx-lab", role: "rowheader" }, color ? h("i", { class: "lab-dot", style: { background: color } }) : null, h("span", { class: "mx-name" }, name)),
         cells, totalEl);
     };
 
@@ -461,7 +461,7 @@ export function buildCadence(container) {
     const cells = { n: h("span", { class: "cd-n", role: "cell" }), val: h("span", { class: "cd-val", role: "cell" }), iqr: h("span", { class: "cd-iqr", role: "cell" }), last: h("span", { class: "cd-last", role: "cell" }) };
     const tiers = TIERS.map(() => h("span", { class: "cd-cell", role: "cell" }));
     const el = h("div", { class: `cd-row ${cls}`, role: "row" },
-      h("span", { class: "cd-lab", role: "rowheader" }, color ? h("i", { class: "lab-dot", style: { background: color } }) : null, name),
+      h("span", { class: "cd-lab", role: "rowheader" }, color ? h("i", { class: "lab-dot", style: { background: color } }) : null, h("span", { class: "mx-name" }, name)),
       h("span", { class: "cd-bar", role: "cell" }, h("span", { class: "cd-line" }), band, tick, dots),
       cells.n, cells.val, cells.iqr, cells.last,
       h("span", { class: "cd-tiers", role: "presentation" }, tiers),
