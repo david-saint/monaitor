@@ -196,6 +196,14 @@ function pricePerM(perToken) {
   return Math.round(v * 1e6 * 10000) / 10000;
 }
 
+/** Token count → the marketed "k" figure the data uses: 262,144 → 256, 1,048,576 → 1000 ("1M"). */
+function contextK(tokens) {
+  if (!Number.isFinite(tokens) || tokens <= 0) return null;
+  if (tokens % 1024 !== 0) return Math.round(tokens / 1000);
+  const k = tokens / 1024;
+  return k >= 1024 && k % 1024 === 0 ? (k / 1024) * 1000 : k;
+}
+
 function firstSentence(text, max = 240) {
   const clean = String(text || "").replace(/\s+/g, " ").trim();
   if (!clean) return null;
@@ -237,7 +245,7 @@ async function fromOpenRouter() {
       hfId: m.hugging_face_id || null,
       modality: modalityFromOpenRouter(arch),
       caps,
-      ctxK: Number.isFinite(ctx) && ctx > 0 ? Math.round(ctx / 1000) : null,
+      ctxK: contextK(ctx),
       priceIn: pricePerM(m.pricing?.prompt),
       priceOut: pricePerM(m.pricing?.completion),
       summary: firstSentence(m.description),
