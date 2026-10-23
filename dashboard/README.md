@@ -63,6 +63,19 @@ These are descriptive projections from past rhythm, not predictions of fact. Fre
 - Records are read defensively against [`../CONTRACT.md`](../CONTRACT.md): unknown enums, null prices, missing times and sources don't break rendering. Gap fields are recomputed from dates, so file order doesn't matter.
 - The dashboard never writes to `data/`.
 
+## Daily rescan
+
+`.github/workflows/rescan.yml` runs `scripts/rescan.mjs` every day at 06:17 UTC (and on demand from the Actions tab). It polls two free, keyless sources — OpenRouter's public model list and each lab's Hugging Face org — for models first seen in the last 7 days that aren't already in `data/`, appends them as contract records, and commits. GitHub Pages then redeploys, and the dashboard picks them up (feeds are fetched with `no-store`).
+
+Auto-added records are marked `auto_detected: true`, use `confidence: "medium"` (OpenRouter) or `"low"` (Hugging Face only), and carry approximate times: OpenRouter's listing time, which is usually within hours of launch. Tier and release type are guessed from the name. Run a backfill or a local check with:
+
+```bash
+node scripts/rescan.mjs --dry-run              # what would be added
+node scripts/rescan.mjs --lookback=30          # wider window
+```
+
+Releases that never reach OpenRouter or Hugging Face (consumer-app-only features, some image/video models) still need adding by hand.
+
 ## Files
 
 ```
