@@ -237,7 +237,7 @@
     "license": null,
     "params_total_b": null,
     "params_active_b": null,
-    "context_window_k": 1049,
+    "context_window_k": 1000,
     "price_input_per_m": 2,
     "price_output_per_m": 10,
     "release_date": "2026-10-23",

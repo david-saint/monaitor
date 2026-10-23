@@ -69,4 +69,4 @@ Scope: every publicly announced/released model from the 10 tracked labs with a r
 - Previews and later GA of the same model = separate entries (`preview` then `ga`).
 - Include image/video/audio/embedding models, not just LLMs.
 - Do not include models released before 2026-01-01.
-- Records added by the daily rescan (`scripts/rescan.mjs`) have `auto_detected: true`, heuristic tier/type values and no benchmarks or signals. To review one, correct its fields, raise `confidence` if a primary source confirms it, and delete `auto_detected`.
+- Records added by the daily rescan (`scripts/rescan.mjs`) have `auto_detected: true`, heuristic tier/type values and no benchmarks or signals. Each has a GitHub issue labelled `auto-detected`, and while the flag is set the rescan may fill in empty fields (open weights, prices, context). To review one, correct its fields, raise `confidence` if a primary source confirms it, and delete `auto_detected`; that closes its issue.

@@ -74,6 +74,10 @@ node scripts/rescan.mjs --dry-run              # what would be added
 node scripts/rescan.mjs --lookback=30          # wider window
 ```
 
+### Reviewing auto-added records
+
+Every record with `auto_detected: true` gets a GitHub issue labelled **auto-detected**, listing the guessed fields and a review checklist. Until it is reviewed, each daily run re-checks the record and fills in fields that are still empty: open weights when a matching Hugging Face repo appears (with licence and link), and price or context once OpenRouter has them. It never overwrites a value, and each fill-in is posted as a comment on the issue. To finish a review, correct the record and delete `"auto_detected": true`; the push to `main` re-runs the workflow, which closes the issue. Closing an issue by hand also stops it being reopened. `scripts/review-issues.mjs` does the issue side.
+
 Releases that never reach OpenRouter or Hugging Face (consumer-app-only features, some image/video models) still need adding by hand.
 
 ## Files

@@ -8,9 +8,13 @@ on:
       lookback:
         description: "Days to look back"
         default: "7"
+  push:
+    branches: [main]
+    paths: ["data/**"] # a reviewed record (auto_detected removed) closes its issue right away
 
 permissions:
   contents: write
+  issues: write
 
 concurrency:
   group: rescan
@@ -29,14 +33,18 @@ jobs:
 
       - name: Scan OpenRouter + Hugging Face for new releases
         id: scan
-        run: node scripts/rescan.mjs --lookback=${{ inputs.lookback || '7' }}
+        run: node scripts/rescan.mjs --lookback=${{ inputs.lookback || '7' }} --report="$RUNNER_TEMP/rescan.json"
 
-      - name: Commit new releases
-        if: steps.scan.outputs.added != '0'
+      - name: Commit changes
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/
           git diff --cached --quiet && exit 0
-          git commit -m "data: daily rescan, ${{ steps.scan.outputs.added }} new release(s)"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "data: daily rescan, ${{ steps.scan.outputs.added }} new, ${{ steps.scan.outputs.updated }} filled in"
           git push
+
+      - name: Sync review issues
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: node scripts/review-issues.mjs --report="$RUNNER_TEMP/rescan.json"

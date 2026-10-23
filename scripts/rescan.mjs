@@ -15,12 +15,18 @@
    re-added. New records are marked `"auto_detected": true` and carry
    `confidence: "medium"` (OpenRouter) or `"low"` (Hugging Face only).
 
+   Records still marked auto_detected are re-checked on every run: when their
+   weights appear on Hugging Face, or OpenRouter gains a missing price or
+   context window, the record is filled in. Fields are only ever filled, never
+   overwritten. Remove `auto_detected` from a record to stop this.
+
    Usage:
      node scripts/rescan.mjs                  # last 7 days, writes data/
      node scripts/rescan.mjs --dry-run        # print, don't write
      node scripts/rescan.mjs --lookback=30    # wider window
      node scripts/rescan.mjs --since=2026-10-01
      node scripts/rescan.mjs --fixtures=dir   # read openrouter.json / hf-<org>.json from dir
+     node scripts/rescan.mjs --report=out.json  # also write what changed, for scripts/review-issues.mjs
    Node 18+; no dependencies.
    ───────────────────────────────────────────────────────────────────────────── */
 
@@ -123,7 +129,13 @@ function matchKeys(...names) {
   return keys;
 }
 
-async function getJson(url, fixture) {
+const jsonCache = new Map();
+function getJson(url, fixture) {
+  if (!jsonCache.has(url)) jsonCache.set(url, fetchJson(url, fixture));
+  return jsonCache.get(url);
+}
+
+async function fetchJson(url, fixture) {
   if (args.fixtures) return JSON.parse(await readFile(join(args.fixtures, fixture), "utf8"));
   for (let attempt = 1; ; attempt++) {
     try {
@@ -196,6 +208,14 @@ function pricePerM(perToken) {
   return Math.round(v * 1e6 * 10000) / 10000;
 }
 
+/** Token count → the marketed "k" figure the data uses: 262,144 → 256, 1,048,576 → 1000 ("1M"). */
+function contextK(tokens) {
+  if (!Number.isFinite(tokens) || tokens <= 0) return null;
+  if (tokens % 1024 !== 0) return Math.round(tokens / 1000);
+  const k = tokens / 1024;
+  return k >= 1024 && k % 1024 === 0 ? (k / 1024) * 1000 : k;
+}
+
 function firstSentence(text, max = 240) {
   const clean = String(text || "").replace(/\s+/g, " ").trim();
   if (!clean) return null;
@@ -205,8 +225,10 @@ function firstSentence(text, max = 240) {
 }
 
 // ── sources → candidates ────────────────────────────────────────────────────
+const OPENROUTER_URL = "https://openrouter.ai/api/v1/models";
+
 async function fromOpenRouter() {
-  const json = await getJson("https://openrouter.ai/api/v1/models", "openrouter.json");
+  const json = await getJson(OPENROUTER_URL, "openrouter.json");
   const out = [];
   for (const m of json.data || []) {
     const [prefix, rest] = String(m.id || "").split("/");
@@ -237,7 +259,7 @@ async function fromOpenRouter() {
       hfId: m.hugging_face_id || null,
       modality: modalityFromOpenRouter(arch),
       caps,
-      ctxK: Number.isFinite(ctx) && ctx > 0 ? Math.round(ctx / 1000) : null,
+      ctxK: contextK(ctx),
       priceIn: pricePerM(m.pricing?.prompt),
       priceOut: pricePerM(m.pricing?.completion),
       summary: firstSentence(m.description),
@@ -261,7 +283,6 @@ async function fromHuggingFace(org, labId) {
     if (HF_SKIP.test(base)) continue;
     if (HF_NAME_FILTER[org] && !HF_NAME_FILTER[org].test(base)) continue;
     if (m.pipeline_tag && !HF_PIPELINES.has(m.pipeline_tag)) continue;
-    const license = (m.tags || []).find((t) => t.startsWith("license:"))?.slice(8) || null;
     out.push({
       via: "huggingface",
       labId,
@@ -269,7 +290,7 @@ async function fromHuggingFace(org, labId) {
       ts,
       apiId: null,
       hfId: repo,
-      license: license && license !== "other" ? license : null,
+      license: hfLicense(m),
       modality: modalityFromPipeline(m.pipeline_tag),
       caps: [],
       ctxK: null,
@@ -358,6 +379,72 @@ function buildRecord(c, labRows) {
   };
 }
 
+// ── re-check of unreviewed records ───────────────────────────────────────────
+function hfLicense(m) {
+  const license = (m.tags || []).find((t) => t.startsWith("license:"))?.slice(8) || null;
+  return license && license !== "other" ? license : null;
+}
+
+/** Fill in what the sources now know about a record that is still auto_detected. Returns change notes. */
+async function recheck(rec) {
+  const changes = [];
+  const or = (await getJson(OPENROUTER_URL, "openrouter.json")).data?.find((m) => {
+    const [prefix, rest] = String(m.id || "").split("/");
+    return OPENROUTER_PREFIX[prefix] === rec.lab_id && rest === rec.api_model_id;
+  });
+
+  if (or) {
+    const ctx = contextK(Number(or.context_length || or.top_provider?.context_length));
+    const priceIn = pricePerM(or.pricing?.prompt);
+    const priceOut = pricePerM(or.pricing?.completion);
+    if (rec.context_window_k == null && ctx != null) { rec.context_window_k = ctx; changes.push(`context window: ${ctx}k`); }
+    if (rec.price_input_per_m == null && priceIn != null) { rec.price_input_per_m = priceIn; changes.push(`input price: $${priceIn}/M`); }
+    if (rec.price_output_per_m == null && priceOut != null) { rec.price_output_per_m = priceOut; changes.push(`output price: $${priceOut}/M`); }
+    if (!rec.availability.includes("api")) { rec.availability.push("api"); changes.push("available on the API (OpenRouter)"); }
+  }
+
+  if (!rec.open_weights) {
+    // The weights may land under the model's name, or without its tier word ("Kimi-K3.1" for "Kimi K3.1 Pro").
+    const wanted = matchKeys(rec.model_name, rec.api_model_id);
+    const tierWord = norm(rec.tier_label);
+    if (tierWord) for (const k of [...wanted]) if (k.endsWith(tierWord) && k.length > tierWord.length + 2) wanted.add(k.slice(0, -tierWord.length));
+
+    const repos = [];
+    if (or?.hugging_face_id) repos.push({ id: or.hugging_face_id, tags: [] });
+    if (rec.version) {
+      for (const [org, labId] of Object.entries(HF_ORGS)) {
+        if (labId !== rec.lab_id) continue;
+        const url = `https://huggingface.co/api/models?author=${encodeURIComponent(org)}&search=${encodeURIComponent(rec.version)}&limit=50`;
+        const list = await getJson(url, `hf-search-${org}-${rec.version}.json`).catch(() => []);
+        for (const m of list || []) {
+          const base = String(m.id || "").split("/").pop();
+          if (!base || m.private || HF_SKIP.test(base)) continue;
+          if ([...matchKeys(base)].some((k) => wanted.has(k))) repos.push(m);
+        }
+      }
+    }
+    const repo = repos[0];
+    if (repo) {
+      rec.open_weights = true;
+      if (!rec.availability.includes("open-weights")) rec.availability.push("open-weights");
+      const url = `https://huggingface.co/${repo.id}`;
+      if (!rec.sources.includes(url)) rec.sources.push(url);
+      rec.license ??= hfLicense(repo);
+      changes.push(`open weights on Hugging Face: ${url}${rec.license ? ` (${rec.license})` : ""}`);
+    }
+  }
+  return changes;
+}
+
+/** Swap one record's text in place so the rest of the file keeps its exact formatting. */
+function replaceRecordText(text, rec) {
+  const at = text.indexOf(`"id": ${JSON.stringify(rec.id)}`);
+  const start = text.lastIndexOf("\n  {", at) + 1;
+  const end = text.indexOf("\n  }", at) + 4;
+  if (at < 0 || start <= 0 || end < 4) return null;
+  return text.slice(0, start) + JSON.stringify(rec, null, 2).replace(/^/gm, "  ") + text.slice(end);
+}
+
 /** Append records to the file text so existing entries keep their exact formatting. */
 function appendToFileText(text, existing, added) {
   const lastTs = existing.at(-1)?.release_datetime_utc ?? "";
@@ -439,11 +526,29 @@ for (const c of accepted.sort((a, b) => a.ts - b.ts)) {
   (byLab[c.labId] ||= []).push(rec);
 }
 
+const updated = [];
+for (const [labId, lab] of Object.entries(labs)) {
+  for (const rec of lab.rows) {
+    if (!rec.auto_detected) continue;
+    try {
+      const changes = await recheck(rec);
+      if (!changes.length) continue;
+      updated.push({ id: rec.id, lab_id: labId, model_name: rec.model_name, changes });
+      const text = replaceRecordText(lab.text, rec);
+      lab.text = text ?? `${JSON.stringify(lab.rows, null, 2)}\n`;
+      lab.dirty = true;
+    } catch (err) {
+      warnings.push(`re-check ${rec.id}: ${err.message}`);
+    }
+  }
+}
+
 const lines = [];
-for (const [labId, added] of Object.entries(byLab)) {
-  const lab = labs[labId];
+for (const [labId, lab] of Object.entries(labs)) {
+  const added = byLab[labId] || [];
   for (const r of added) lines.push(`- **${r.model_name}** (${labId}) — ${r.release_date}, ${r.tier}, via ${r.sources[0]}`);
-  if (!DRY) await writeFile(lab.file, appendToFileText(lab.text, lab.rows, added));
+  if (added.length) lab.text = appendToFileText(lab.text, lab.rows, added);
+  if (!DRY && (added.length || lab.dirty)) await writeFile(lab.file, lab.text);
 }
 
 const window = `${isoDate(SINCE)} → ${isoDate(NOW)}`;
@@ -451,8 +556,14 @@ const report = [
   `### Monaitor rescan (${window})`,
   lines.length ? `${lines.length} new release${lines.length === 1 ? "" : "s"}${DRY ? " (dry run, not written)" : ""}:` : "No new releases.",
   ...lines,
+  ...(updated.length ? ["", `${updated.length} unreviewed record${updated.length === 1 ? "" : "s"} filled in:`] : []),
+  ...updated.map((u) => `- **${u.model_name}** (${u.lab_id}): ${u.changes.join("; ")}`),
   ...(warnings.length ? ["", "Sources that failed:", ...warnings.map((w) => `- ${w}`)] : []),
 ].join("\n");
 console.log(report);
 if (process.env.GITHUB_STEP_SUMMARY) await appendFile(process.env.GITHUB_STEP_SUMMARY, `${report}\n`);
-if (process.env.GITHUB_OUTPUT) await appendFile(process.env.GITHUB_OUTPUT, `added=${lines.length}\n`);
+if (process.env.GITHUB_OUTPUT) await appendFile(process.env.GITHUB_OUTPUT, `added=${lines.length}\nupdated=${updated.length}\n`);
+if (args.report) {
+  const addedIds = Object.values(byLab).flat().map((r) => r.id);
+  await writeFile(args.report, `${JSON.stringify({ added: addedIds, updated, dry_run: DRY }, null, 2)}\n`);
+}
