@@ -212,5 +212,53 @@
       "https://x.com/Kimi_Moonshot/status/2077830229968683203"
     ],
     "confidence": "high"
+  },
+  {
+    "id": "moonshot-kimi-k3-1-pro",
+    "lab_id": "moonshot",
+    "model_name": "Kimi K3.1 Pro",
+    "api_model_id": "kimi-k3.1-pro",
+    "family": "Kimi",
+    "version": "3.1",
+    "tier": "flagship",
+    "tier_label": "Pro",
+    "modality_primary": "multimodal",
+    "capabilities": [
+      "reasoning",
+      "vision",
+      "tool-use",
+      "long-context"
+    ],
+    "release_type": "point-update",
+    "availability": [
+      "api"
+    ],
+    "open_weights": false,
+    "license": null,
+    "params_total_b": null,
+    "params_active_b": null,
+    "context_window_k": 1049,
+    "price_input_per_m": 2,
+    "price_output_per_m": 10,
+    "release_date": "2026-10-23",
+    "release_time_utc": "17:56",
+    "release_datetime_utc": "2026-10-23T17:56:00Z",
+    "time_confidence": "approximate",
+    "day_of_week": "Friday",
+    "iso_week": 43,
+    "days_since_prev_lab_release": 99,
+    "days_since_prev_same_tier": 99,
+    "announcement_channel": "docs-changelog",
+    "event": null,
+    "pre_release_signals": [],
+    "codename": null,
+    "predecessor_id": "moonshot-kimi-k3",
+    "notable_benchmarks": {},
+    "summary": "Kimi K3.1 Pro is Moonshot AI's flagship open-weight multimodal reasoning model and a post-trained successor to Kimi K3, with a 1M-token context window.",
+    "sources": [
+      "https://openrouter.ai/moonshotai/kimi-k3.1-pro"
+    ],
+    "confidence": "medium",
+    "auto_detected": true
   }
 ]
