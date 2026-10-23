@@ -1,6 +1,6 @@
 # Monaitor — Model Release Data Contract (v1)
 
-Scope: every publicly announced/released model from the 10 tracked labs with a release date in **2026 (Jan 1 – today, Oct 21 2026)**.
+Scope: every publicly announced/released model from the 10 tracked labs with a release date in **2026 (Jan 1 – today)**.
 
 ## Tracked labs (`lab_id`)
 | lab_id | Lab | Main families |
@@ -58,7 +58,8 @@ Scope: every publicly announced/released model from the 10 tracked labs with a r
   "notable_benchmarks": { "SWE-bench Verified": 80.9 }, // object<string, number>, may be {}
   "summary": "One-sentence description.",   // string
   "sources": ["https://..."],               // >=1 URL, primary source preferred
-  "confidence": "high"                      // enum: "high" (primary source) | "medium" (reputable press) | "low" (single/unclear source)
+  "confidence": "high",                     // enum: "high" (primary source) | "medium" (reputable press) | "low" (single/unclear source)
+  "auto_detected": true                     // optional; present only on records added by scripts/rescan.mjs and not yet reviewed
 }
 ```
 
@@ -68,3 +69,4 @@ Scope: every publicly announced/released model from the 10 tracked labs with a r
 - Previews and later GA of the same model = separate entries (`preview` then `ga`).
 - Include image/video/audio/embedding models, not just LLMs.
 - Do not include models released before 2026-01-01.
+- Records added by the daily rescan (`scripts/rescan.mjs`) have `auto_detected: true`, heuristic tier/type values and no benchmarks or signals. To review one, correct its fields, raise `confidence` if a primary source confirms it, and delete `auto_detected`.
