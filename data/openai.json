@@ -1938,5 +1938,101 @@
       "https://x.com/OpenAI/status/2110797830361436604"
     ],
     "confidence": "high"
+  },
+  {
+    "id": "openai-gpt-6-1-terra",
+    "lab_id": "openai",
+    "model_name": "GPT-6.1 Terra",
+    "api_model_id": "gpt-6.1-terra",
+    "family": "GPT",
+    "version": "6.1",
+    "tier": "flagship",
+    "tier_label": "6.1 Terra",
+    "modality_primary": "multimodal",
+    "capabilities": [
+      "reasoning",
+      "vision",
+      "tool-use",
+      "long-context"
+    ],
+    "release_type": "new-model",
+    "availability": [
+      "api"
+    ],
+    "open_weights": false,
+    "license": null,
+    "params_total_b": null,
+    "params_active_b": null,
+    "context_window_k": 1050,
+    "price_input_per_m": 1,
+    "price_output_per_m": 5,
+    "release_date": "2026-10-26",
+    "release_time_utc": "18:13",
+    "release_datetime_utc": "2026-10-26T18:13:00Z",
+    "time_confidence": "approximate",
+    "day_of_week": "Monday",
+    "iso_week": 44,
+    "days_since_prev_lab_release": 11,
+    "days_since_prev_same_tier": 27,
+    "announcement_channel": "docs-changelog",
+    "event": null,
+    "pre_release_signals": [],
+    "codename": null,
+    "predecessor_id": "openai-gpt-6-1-sol",
+    "notable_benchmarks": {},
+    "summary": "GPT-6.1 Terra is the mid-tier model in OpenAI's GPT-6.1 series, priced below GPT-6.1 Sol.",
+    "sources": [
+      "https://openrouter.ai/openai/gpt-6.1-terra"
+    ],
+    "confidence": "medium",
+    "auto_detected": true
+  },
+  {
+    "id": "openai-gpt-6-1-terra-pro",
+    "lab_id": "openai",
+    "model_name": "GPT-6.1 Terra Pro",
+    "api_model_id": "gpt-6.1-terra-pro",
+    "family": "GPT",
+    "version": "6.1",
+    "tier": "flagship",
+    "tier_label": "Pro",
+    "modality_primary": "multimodal",
+    "capabilities": [
+      "reasoning",
+      "vision",
+      "tool-use",
+      "long-context"
+    ],
+    "release_type": "new-model",
+    "availability": [
+      "api"
+    ],
+    "open_weights": false,
+    "license": null,
+    "params_total_b": null,
+    "params_active_b": null,
+    "context_window_k": 1050,
+    "price_input_per_m": 1,
+    "price_output_per_m": 5,
+    "release_date": "2026-10-26",
+    "release_time_utc": "18:15",
+    "release_datetime_utc": "2026-10-26T18:15:00Z",
+    "time_confidence": "approximate",
+    "day_of_week": "Monday",
+    "iso_week": 44,
+    "days_since_prev_lab_release": 0,
+    "days_since_prev_same_tier": 0,
+    "announcement_channel": "docs-changelog",
+    "event": null,
+    "pre_release_signals": [],
+    "codename": null,
+    "predecessor_id": "openai-gpt-6-1-terra",
+    "notable_benchmarks": {},
+    "summary": "GPT-6.1 Terra Pro is the same underlying model as [GPT-6.1 Terra](https://openrouter.ai/openai/gpt-6.1-terra), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks.",
+    "sources": [
+      "https://openrouter.ai/openai/gpt-6.1-terra-pro"
+    ],
+    "confidence": "medium",
+    "auto_detected": true
   }
 ]
