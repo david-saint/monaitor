@@ -515,5 +515,53 @@
       "https://x.com/Zai_org/status/2092616204787626030"
     ],
     "confidence": "high"
+  },
+  {
+    "id": "zhipu-glm-5-3-flashx-legal",
+    "lab_id": "zhipu",
+    "model_name": "GLM 5.3 FlashX Legal",
+    "api_model_id": "glm-5.3-flashx-legal",
+    "family": "GLM",
+    "version": "5.3",
+    "tier": "flagship",
+    "tier_label": "5.3 FlashX Legal",
+    "modality_primary": "multimodal",
+    "capabilities": [
+      "reasoning",
+      "vision",
+      "tool-use",
+      "long-context"
+    ],
+    "release_type": "new-model",
+    "availability": [
+      "api"
+    ],
+    "open_weights": false,
+    "license": null,
+    "params_total_b": null,
+    "params_active_b": null,
+    "context_window_k": 1000,
+    "price_input_per_m": 0.37,
+    "price_output_per_m": 1.25,
+    "release_date": "2026-11-02",
+    "release_time_utc": "13:29",
+    "release_datetime_utc": "2026-11-02T13:29:00Z",
+    "time_confidence": "approximate",
+    "day_of_week": "Monday",
+    "iso_week": 45,
+    "days_since_prev_lab_release": 68,
+    "days_since_prev_same_tier": 76,
+    "announcement_channel": "docs-changelog",
+    "event": null,
+    "pre_release_signals": [],
+    "codename": null,
+    "predecessor_id": "zhipu-glm-5-3",
+    "notable_benchmarks": {},
+    "summary": "GLM-5.3-FlashX-Legal (GLM-Legal) is Z.ai's legal-domain variant of GLM-5.3-FlashX, a native multimodal model that accepts text, image, and video input and produces text.",
+    "sources": [
+      "https://openrouter.ai/z-ai/glm-5.3-flashx-legal"
+    ],
+    "confidence": "medium",
+    "auto_detected": true
   }
 ]
