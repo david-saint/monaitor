@@ -2135,5 +2135,51 @@
       "https://ai.google.dev/gemini-api/docs/changelog"
     ],
     "confidence": "high"
+  },
+  {
+    "id": "google-gemini-omni-1-2-flash",
+    "lab_id": "google",
+    "model_name": "Gemini Omni 1.2 Flash",
+    "api_model_id": "gemini-omni-1.2-flash",
+    "family": "Gemini",
+    "version": "1.2",
+    "tier": "fast",
+    "tier_label": "Flash",
+    "modality_primary": "video",
+    "capabilities": [
+      "reasoning",
+      "vision"
+    ],
+    "release_type": "new-model",
+    "availability": [
+      "api"
+    ],
+    "open_weights": false,
+    "license": null,
+    "params_total_b": null,
+    "params_active_b": null,
+    "context_window_k": 128,
+    "price_input_per_m": 1.5,
+    "price_output_per_m": 9,
+    "release_date": "2026-11-05",
+    "release_time_utc": "17:16",
+    "release_datetime_utc": "2026-11-05T17:16:00Z",
+    "time_confidence": "approximate",
+    "day_of_week": "Thursday",
+    "iso_week": 45,
+    "days_since_prev_lab_release": 23,
+    "days_since_prev_same_tier": 30,
+    "announcement_channel": "docs-changelog",
+    "event": null,
+    "pre_release_signals": [],
+    "codename": null,
+    "predecessor_id": "google-gemini-3-8-flash",
+    "notable_benchmarks": {},
+    "summary": "Gemini Omni 1.2 Flash is Google's native multimodal video generation and editing model, the successor to Gemini Omni 1.1 Flash.",
+    "sources": [
+      "https://openrouter.ai/google/gemini-omni-1.2-flash"
+    ],
+    "confidence": "medium",
+    "auto_detected": true
   }
 ]
