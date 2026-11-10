@@ -658,5 +658,54 @@
       "https://x.com/AIatMeta/status/2110779754274292212"
     ],
     "confidence": "high"
+  },
+  {
+    "id": "meta-muse-ember",
+    "lab_id": "meta",
+    "model_name": "Muse Ember",
+    "api_model_id": "muse-ember",
+    "family": "Muse",
+    "version": null,
+    "tier": "flagship",
+    "tier_label": "Ember",
+    "modality_primary": "multimodal",
+    "capabilities": [
+      "reasoning",
+      "vision",
+      "tool-use",
+      "long-context",
+      "audio-in"
+    ],
+    "release_type": "new-model",
+    "availability": [
+      "api"
+    ],
+    "open_weights": false,
+    "license": null,
+    "params_total_b": null,
+    "params_active_b": null,
+    "context_window_k": 1000,
+    "price_input_per_m": 0.1,
+    "price_output_per_m": 0.5,
+    "release_date": "2026-11-09",
+    "release_time_utc": "18:07",
+    "release_datetime_utc": "2026-11-09T18:07:00Z",
+    "time_confidence": "approximate",
+    "day_of_week": "Monday",
+    "iso_week": 46,
+    "days_since_prev_lab_release": 25,
+    "days_since_prev_same_tier": 25,
+    "announcement_channel": "docs-changelog",
+    "event": null,
+    "pre_release_signals": [],
+    "codename": null,
+    "predecessor_id": "meta-muse-spark-open",
+    "notable_benchmarks": {},
+    "summary": "Muse Ember is the smallest and most efficient model from Meta that’s designed for complex reasoning execution and the work agents repeat all day: tool calls, coding agent subtasks, routing,...",
+    "sources": [
+      "https://openrouter.ai/meta/muse-ember"
+    ],
+    "confidence": "medium",
+    "auto_detected": true
   }
 ]

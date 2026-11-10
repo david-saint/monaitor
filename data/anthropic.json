@@ -688,5 +688,53 @@
       "https://x.com/claudeai/status/2107894039626277339"
     ],
     "confidence": "high"
+  },
+  {
+    "id": "anthropic-claude-fable-5-2",
+    "lab_id": "anthropic",
+    "model_name": "Claude Fable 5.2",
+    "api_model_id": "claude-fable-5.2",
+    "family": "Claude",
+    "version": "5.2",
+    "tier": "flagship",
+    "tier_label": "Fable 5.2",
+    "modality_primary": "multimodal",
+    "capabilities": [
+      "reasoning",
+      "vision",
+      "tool-use",
+      "long-context"
+    ],
+    "release_type": "point-update",
+    "availability": [
+      "api"
+    ],
+    "open_weights": false,
+    "license": null,
+    "params_total_b": null,
+    "params_active_b": null,
+    "context_window_k": 1000,
+    "price_input_per_m": 8,
+    "price_output_per_m": 40,
+    "release_date": "2026-11-09",
+    "release_time_utc": "19:49",
+    "release_datetime_utc": "2026-11-09T19:49:00Z",
+    "time_confidence": "approximate",
+    "day_of_week": "Monday",
+    "iso_week": 46,
+    "days_since_prev_lab_release": 33,
+    "days_since_prev_same_tier": 48,
+    "announcement_channel": "docs-changelog",
+    "event": null,
+    "pre_release_signals": [],
+    "codename": null,
+    "predecessor_id": "anthropic-claude-opus-5-5",
+    "notable_benchmarks": {},
+    "summary": "Claude Fable 5.2 is Anthropic's most capable model for the most demanding technical work, with gains over Fable 5.1 in coding, reasoning, and vision.",
+    "sources": [
+      "https://openrouter.ai/anthropic/claude-fable-5.2"
+    ],
+    "confidence": "medium",
+    "auto_detected": true
   }
 ]
