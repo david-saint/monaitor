@@ -2230,5 +2230,54 @@
     ],
     "confidence": "medium",
     "auto_detected": true
+  },
+  {
+    "id": "google-gemini-4-hydrogen",
+    "lab_id": "google",
+    "model_name": "Gemini 4 Hydrogen",
+    "api_model_id": "gemini-4-hydrogen",
+    "family": "Gemini",
+    "version": "4",
+    "tier": "flagship",
+    "tier_label": "4 Hydrogen",
+    "modality_primary": "multimodal",
+    "capabilities": [
+      "reasoning",
+      "vision",
+      "tool-use",
+      "long-context",
+      "audio-in"
+    ],
+    "release_type": "new-model",
+    "availability": [
+      "api"
+    ],
+    "open_weights": false,
+    "license": null,
+    "params_total_b": null,
+    "params_active_b": null,
+    "context_window_k": 1000,
+    "price_input_per_m": 1.5,
+    "price_output_per_m": 7.5,
+    "release_date": "2026-11-12",
+    "release_time_utc": "18:01",
+    "release_datetime_utc": "2026-11-12T18:01:00Z",
+    "time_confidence": "approximate",
+    "day_of_week": "Thursday",
+    "iso_week": 46,
+    "days_since_prev_lab_release": 2,
+    "days_since_prev_same_tier": 2,
+    "announcement_channel": "docs-changelog",
+    "event": null,
+    "pre_release_signals": [],
+    "codename": null,
+    "predecessor_id": "google-gemini-4-carbon",
+    "notable_benchmarks": {},
+    "summary": "Gemini 4 Hydrogen is the high-efficiency workhorse model of the Gemini 4 family from Google, built for high-throughput agentic workflows, coding and multi-model routing at lower cost and latency than...",
+    "sources": [
+      "https://openrouter.ai/google/gemini-4-hydrogen"
+    ],
+    "confidence": "medium",
+    "auto_detected": true
   }
 ]
