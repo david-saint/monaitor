@@ -672,5 +672,50 @@
       "https://mistral.ai/rss.xml"
     ],
     "confidence": "high"
+  },
+  {
+    "id": "mistral-pixtral-large-2502",
+    "lab_id": "mistral",
+    "model_name": "Pixtral Large 2502",
+    "api_model_id": "pixtral-large-2502",
+    "family": "Pixtral",
+    "version": "2502",
+    "tier": "flagship",
+    "tier_label": "Large",
+    "modality_primary": "multimodal",
+    "capabilities": [
+      "vision"
+    ],
+    "release_type": "new-model",
+    "availability": [
+      "api"
+    ],
+    "open_weights": false,
+    "license": null,
+    "params_total_b": null,
+    "params_active_b": null,
+    "context_window_k": 125,
+    "price_input_per_m": 2,
+    "price_output_per_m": 6,
+    "release_date": "2026-11-20",
+    "release_time_utc": "00:51",
+    "release_datetime_utc": "2026-11-20T00:51:00Z",
+    "time_confidence": "approximate",
+    "day_of_week": "Friday",
+    "iso_week": 47,
+    "days_since_prev_lab_release": 31,
+    "days_since_prev_same_tier": 45,
+    "announcement_channel": "docs-changelog",
+    "event": null,
+    "pre_release_signals": [],
+    "codename": null,
+    "predecessor_id": null,
+    "notable_benchmarks": {},
+    "summary": "Pixtral Large 2502 is the February 2025 version of Mistral AI's large multimodal model, following [Pixtral Large 2411](https://openrouter.ai/mistralai/pixtral-large-2411).",
+    "sources": [
+      "https://openrouter.ai/mistralai/pixtral-large-2502"
+    ],
+    "confidence": "medium",
+    "auto_detected": true
   }
 ]
